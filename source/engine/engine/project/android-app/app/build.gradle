@@ -11,7 +11,7 @@ def publicNative = tasks.register('stageVerifiedPublicNative', Sync) {
 }
 // Four-ABI source rebuilds provide a tree of freshly built libraries explicitly.
 // Never discover old prebuilts from app/jniLibs when building this variant.
-def universalNative = rootProject.file(providers.gradleProperty('fdpUniversalNative').orElse('build/verified-public0317-inputs').get())
+def universalNative = rootProject.file(providers.gradleProperty('fdpUniversalNative').orElse('native-build/verified-jni').get())
 def universalAbis = ['arm64-v8a','armeabi-v7a','x86','x86_64']
 def checkUniversal = tasks.register('checkUniversalPublicInputs') {
     doLast {
@@ -106,6 +106,16 @@ android {
             debuggable false
             matchingFallbacks = ['publicRelease','release']
         }
+        // Private preinstalled-content build which deliberately retains the
+        // public app identity.  Its assets come from the main (personal)
+        // source set; it must never fall back to the empty public seed.
+        personalCommunityUniversalRelease {
+            initWith release
+            ndk { abiFilters.clear(); abiFilters 'arm64-v8a','armeabi-v7a','x86','x86_64' }
+            applicationIdSuffix '.community'
+            debuggable false
+            matchingFallbacks = ['release']
+        }
         compatProbe {
             initWith publicRelease
             ndk { abiFilters.clear(); abiFilters 'arm64-v8a' }
@@ -137,6 +147,10 @@ android {
         assets.srcDirs = ['src/publicRelease/assets']
         jniLibs.srcDirs = [universalNative]
     }
+    sourceSets.personalCommunityUniversalRelease {
+        assets.srcDirs = ['src/personalCommunityUniversalRelease/assets-nocdrom']
+        jniLibs.srcDirs = [universalNative]
+    }
     sourceSets.otherAbiProbe {
         assets.srcDirs = ['src/publicRelease/assets']
         jniLibs.srcDirs = [otherNativeStage]
@@ -152,6 +166,16 @@ androidComponents {
         variant.outputs.each { output ->
             output.versionCode.set(21)
             output.versionName.set('0.3.17-public')
+        }
+    }
+    beforeVariants(selector().withBuildType('personalCommunityUniversalRelease')) { builder ->
+        builder.minSdk = 21
+        builder.targetSdk = 35
+    }
+    onVariants(selector().withBuildType('personalCommunityUniversalRelease')) { variant ->
+        variant.outputs.each { output ->
+            output.versionCode.set(23)
+            output.versionName.set('0.3.19')
         }
     }
     beforeVariants(selector().withBuildType('publicRelease')) { builder ->
@@ -185,3 +209,4 @@ def checkOther = tasks.register('checkOtherProbeNative') {
 tasks.matching { it.name == 'preOtherAbiProbeBuild' }.configureEach { dependsOn(checkOther) }
 tasks.matching { it.name in ['prePublicReleaseBuild','mergePublicReleaseJniLibFolders'] }.configureEach { dependsOn(publicNative) }
 tasks.matching { it.name in ['prePublicUniversalReleaseBuild','mergePublicUniversalReleaseJniLibFolders','mergePublicUniversalReleaseAssets'] }.configureEach { dependsOn(checkUniversal) }
+tasks.matching { it.name in ['prePersonalCommunityUniversalReleaseBuild','mergePersonalCommunityUniversalReleaseJniLibFolders'] }.configureEach { dependsOn(checkUniversal) }

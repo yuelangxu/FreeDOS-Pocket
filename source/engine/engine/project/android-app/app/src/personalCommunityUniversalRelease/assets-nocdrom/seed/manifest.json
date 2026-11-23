@@ -1,0 +1,10 @@
+{
+  "system": {
+    "bytes": 1060110336,
+    "sha256": "cda4fa481aec320ba17d240086d658f4fc10723d489e7d98e2ab95a9a13ca72d"
+  },
+  "software": {
+    "bytes": 827326464,
+    "sha256": "4d138b877ebb51c23c161b6c2c5654400a895e04912a693a710665e481a33932"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "bytes_excluding_manifest": 80367138,
+  "bytes_excluding_manifest": 80395360,
   "excluded": [
     "signing keys and passwords",
     "private and public VDI disk images",
@@ -8,7 +8,7 @@
     "Gradle/NDK build output",
     "local.properties and machine-specific paths"
   ],
-  "file_count_excluding_manifest": 106,
+  "file_count_excluding_manifest": 115,
   "files": [
     {
       "bytes": 2942,
@@ -36,11 +36,6 @@
       "sha256": "438bd2037ea125e51d71c6852e3358f50a02f4758a825d94fcf07082f0ec5ff9"
     },
     {
-      "bytes": 5448,
-      "path": "patches/SDL2-2.0.8-freedos-pocket.patch",
-      "sha256": "15b44836f59d97fbdda02d3b2c47523bcf0231d99c9924e15a3ae12d1841313f"
-    },
-    {
       "bytes": 559082,
       "path": "patches/glib-2.56.1-freedos-pocket.patch",
       "sha256": "9ad30a113260b122fca65a276199a9004ec86f47caa1531b3896f8694a4087ad"
@@ -61,14 +56,19 @@
       "sha256": "ff36176a1d9b978658c76e6fecddfc0b34d8a56ca33cd735260c25c6c8f889b0"
     },
     {
+      "bytes": 5448,
+      "path": "patches/SDL2-2.0.8-freedos-pocket.patch",
+      "sha256": "15b44836f59d97fbdda02d3b2c47523bcf0231d99c9924e15a3ae12d1841313f"
+    },
+    {
       "bytes": 1060,
       "path": "project/android-app/app/AndroidManifest.xml",
       "sha256": "d7f352e0ee7541ee3384cd9870a1e58bb31738d2782cf3e0edf5a2ba699cb672"
     },
     {
-      "bytes": 9893,
+      "bytes": 11152,
       "path": "project/android-app/app/build.gradle",
-      "sha256": "1b66a6ca94977c0e9571e3252cbff49e0d7cfcbc599783cf947877adfdd23f36"
+      "sha256": "8d8dfcf7824055fd5bbd98fefecbcc9cf05b51c562dfcd659cbab7f1cbcff38e"
     },
     {
       "bytes": 1823,
@@ -136,6 +136,11 @@
       "sha256": "d0b87e877d1412939d6f4f3500b814fce991109a2ada769049f494e6f137d3e5"
     },
     {
+      "bytes": 264,
+      "path": "project/android-app/app/src/personalCommunityUniversalRelease/assets-nocdrom/seed/manifest.json",
+      "sha256": "e2595580d8cf987b5dbe2363f9df3d21c9fe6b0d29c3a3f8d221b1793404325d"
+    },
+    {
       "bytes": 826,
       "path": "project/android-app/app/src/publicRelease/assets/licenses/PUBLIC-CONTENT-NOTICE.txt",
       "sha256": "a1e0df82fe5e697c3db9bdc39a64406ba691ac713b9d7213a7197f4130793c11"
@@ -149,6 +154,16 @@
       "bytes": 77,
       "path": "project/android-app/gradle.properties",
       "sha256": "1a78f8d38b9b092290f9cb52978a0c3490ef7572ef4d9f3d32c4dbc1baf4fad0"
+    },
+    {
+      "bytes": 2958,
+      "path": "project/android-app/NOTICE.txt",
+      "sha256": "5ae63ed0f664835f057d80e5adac072112d25f61faa91284d9180e1a32f28714"
+    },
+    {
+      "bytes": 5826,
+      "path": "project/android-app/README.md",
+      "sha256": "9ca097f0ed1d1fbd8d80f25bca15c35cd1aea2ecff66bfa2d218981acc8a186b"
     },
     {
       "bytes": 212,
@@ -174,21 +189,6 @@
       "bytes": 924,
       "path": "project/guest-tools/hostime/README.md",
       "sha256": "bab0e86dea94e5f7ca043f1a8070c074771601bdd3986635a7316dcc7f6f0c08"
-    },
-    {
-      "bytes": 696,
-      "path": "project/native-jni/Android.mk",
-      "sha256": "598ba40077ae98f0b620cb16d52735b7ddf83bca4948122b8cdc5d1ee56ae4c5"
-    },
-    {
-      "bytes": 914,
-      "path": "project/native-jni/Application.mk",
-      "sha256": "66ced7a17362dcf048d1dc51eb30a073402faa1074f0abf922e0843a8509340f"
-    },
-    {
-      "bytes": 11686,
-      "path": "project/native-jni/Makefile",
-      "sha256": "76b8aba1b1be14754c399de19b2fcbc45b602be1371cd3d7f8d20cb586d45756"
     },
     {
       "bytes": 1003,
@@ -244,6 +244,16 @@
       "bytes": 3243,
       "path": "project/native-jni/android-qemu-build.mak",
       "sha256": "2a537979eac164f67460e827c59d6f6f2050b81b08607d5b6ff69250c7cebedd"
+    },
+    {
+      "bytes": 696,
+      "path": "project/native-jni/Android.mk",
+      "sha256": "598ba40077ae98f0b620cb16d52735b7ddf83bca4948122b8cdc5d1ee56ae4c5"
+    },
+    {
+      "bytes": 914,
+      "path": "project/native-jni/Application.mk",
+      "sha256": "66ced7a17362dcf048d1dc51eb30a073402faa1074f0abf922e0843a8509340f"
     },
     {
       "bytes": 509,
@@ -326,11 +336,6 @@
       "sha256": "56f86bb2e0e045dcd40a8fe2df635e825d04a54c1a97340a8a509594471bb468"
     },
     {
-      "bytes": 73,
-      "path": "project/native-jni/compat/musl/musl-locale/README",
-      "sha256": "020fc7070698f8bb68d31c82180319737e0adf2a71f7c5d11bbdf6c9901527b0"
-    },
-    {
       "bytes": 85279,
       "path": "project/native-jni/compat/musl/musl-locale/big5.h",
       "sha256": "e4e5b82e8ffeceb436f058c520a9148287d766997b4723083a80b429bf3f3f3b"
@@ -384,6 +389,11 @@
       "bytes": 27,
       "path": "project/native-jni/compat/musl/musl-locale/libintl.h",
       "sha256": "08eabef9a1863dc92f3a1ead7b7da61a53ea000cb221ded2a1355a8debcf94f3"
+    },
+    {
+      "bytes": 73,
+      "path": "project/native-jni/compat/musl/musl-locale/README",
+      "sha256": "020fc7070698f8bb68d31c82180319737e0adf2a71f7c5d11bbdf6c9901527b0"
     },
     {
       "bytes": 18578,
@@ -461,14 +471,49 @@
       "sha256": "2c7655da310657f64cf0a0f57007d156a097237b3e0f06d6ad17784787020c45"
     },
     {
+      "bytes": 11686,
+      "path": "project/native-jni/Makefile",
+      "sha256": "76b8aba1b1be14754c399de19b2fcbc45b602be1371cd3d7f8d20cb586d45756"
+    },
+    {
       "bytes": 107,
       "path": "project/native-jni/patches/android.cache",
       "sha256": "1941e70c1c7a6d5b5a44db33bd6b865facdcf26a4bbcb58a1cc83e18b651f2c1"
     },
     {
+      "bytes": 5716,
+      "path": "project/tools/Check-UniversalInputs.py",
+      "sha256": "b6d0c81e9d0310e3826284c06b7b5781a0e851ef4d199e61c68b37e9915760ac"
+    },
+    {
       "bytes": 1895,
       "path": "project/tools/Create-HostImeFloppy.py",
       "sha256": "5f8f9ff6e86b96c8200b9712302e71cd41100d0465c59f10d380fb012378ed5b"
+    },
+    {
+      "bytes": 4535,
+      "path": "project/tools/Create-PersonalCommunitySoftwareDisk.py",
+      "sha256": "af6aea4c40a3c8734c543c698c45a6704f9183f9ed7de110f308d07d7db064c9"
+    },
+    {
+      "bytes": 1647,
+      "path": "project/tools/Disable-CdromBootProbe.py",
+      "sha256": "5a8c508c36617f9bec6176a4f171ed4fcd621a2e2b811fe4cda3b04744875b98"
+    },
+    {
+      "bytes": 1476,
+      "path": "project/tools/Prepare-PersonalCommunitySeed.ps1",
+      "sha256": "8bcb4f01cb8bb96d9f1df8c93f7eeddca73c981b0034cf63948742f9f22ffd7d"
+    },
+    {
+      "bytes": 1599,
+      "path": "project/tools/Source0317-build-abi.sh",
+      "sha256": "e8b870338b8263a4731be8cf7164bb44cd1c4c44fc769403712ac6eed212e955"
+    },
+    {
+      "bytes": 2942,
+      "path": "project/tools/Source0317-BUILDING.md",
+      "sha256": "28a937a1c87d8d17864953c1fc150cd850703510edb972d2836a65537f0132c8"
     },
     {
       "bytes": 13239,
@@ -501,11 +546,6 @@
       "sha256": "82c565213cd9f029a4937afca8d46254e236d8e6007c67aa1861fee6426940a8"
     },
     {
-      "bytes": 4909017,
-      "path": "upstream/SDL2-2.0.8.tar.gz",
-      "sha256": "edc77c57308661d576e843344d8638e025a7818bff73f8fbfab09c3c5fd092ec"
-    },
-    {
       "bytes": 8028716,
       "path": "upstream/glib-2.56.1.tar.xz",
       "sha256": "40ef3f44f2c651c7a31aedee44259809b6f03d3d20be44545cd7d177221c0b8d"
@@ -531,6 +571,11 @@
       "sha256": "c9174eb5933d9eb5e61f541cd6d1184cd3118dfe4c5c4955bc1bdc4d390fa4e5"
     },
     {
+      "bytes": 4909017,
+      "path": "upstream/SDL2-2.0.8.tar.gz",
+      "sha256": "edc77c57308661d576e843344d8638e025a7818bff73f8fbfab09c3c5fd092ec"
+    },
+    {
       "bytes": 3582,
       "path": "verify-archive.py",
       "sha256": "6e18e755636e2793cde1f72d4db719898e56d91b37839828c7f2b73a8056a374"
@@ -541,7 +586,7 @@
       "sha256": "350d57ee307738ab01715ae6cd72683853e9885de5c35c2bac2d8fe73efe7845"
     }
   ],
-  "name": "FreeDOS Pocket engine source companion",
+  "name": "FreeDOS Pocket 0.3.19 corresponding engine and Android source",
   "patches": [
     {
       "bytes": 22767,
@@ -927,7 +972,7 @@
       "sha256": "8c333779544b5d95db3b5ad7f7f759534928656f39ee6b745556d83f83a87754"
     }
   ],
-  "release": "0.3.17-public",
+  "release": "0.3.19",
   "schema_version": 1,
   "upstream_archives": [
     {

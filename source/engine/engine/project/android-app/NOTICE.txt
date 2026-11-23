@@ -1,0 +1,64 @@
+FreeDOS Pocket - Personal Preview: Source and Provenance Notice
+=============================================================
+
+This project is a personal offline Android appliance. It is not an official
+FreeDOS, Limbo, QEMU, Oracle VirtualBox, or Android product release.
+
+Custom integration sources
+--------------------------
+The following Java files and Android build/configuration files were created or
+adapted for this wrapper and are supplied in this project:
+
+  app/src/org/freedos/pocket/MainActivity.java
+  app/src/org/freedos/pocket/DosView.java
+  app/src/org/freedos/pocket/Engine.java
+  app/src/org/freedos/pocket/SessionService.java
+  app/src/com/max2idea/android/limbo/jni/VMExecutor.java
+  app/AndroidManifest.xml
+  app/build.gradle
+  build.gradle
+  settings.gradle
+  gradle.properties
+  Prepare-Assets.ps1
+  tools/Start-TestEmulator.ps1
+
+The JNI class path/signatures match the Limbo native interface. The custom
+integration adds first-launch disk extraction/checksums, independent persistent
+mobile disks, native Canvas/RFB display, keyboard translation and IME integration,
+full-frame stretching, a special-key toolbar, and best-effort QMP lifecycle control.
+These sources are not a claim that any embedded binary or third-party component
+has become proprietary or free of its original license obligations.
+
+Native engine and third-party components
+---------------------------------------
+Native libraries are reused from the official Limbo release:
+  https://github.com/limboemu/limbo
+  Tag: v6.0.1-LimboEmulator
+  Source commit: 887c6a68cd6b414377d7f8071bc12bbc16e59809
+  Binary: limbo-android-x86-6.0.1-qemu-5.1.0.apk
+
+This integration does not modify those native .so binaries. Limbo/QEMU, SDL,
+GLib, Pixman, musl compatibility code, and bundled firmware retain their own
+copyright notices and applicable licenses. Limbo is GPL-2.0-or-later; QEMU as a
+whole is GPL-2.0, with component-specific terms. See:
+
+  research-engine/ENGINE-NOTES.txt
+  research-engine/limbo
+  research-engine/apk-extracted/assets/LICENSE
+  app/assets/licenses
+
+Retain the corresponding source, modifications and applicable build instructions
+with any redistribution as required by the respective licenses. This notice is
+not a substitute for reading the complete component license texts.
+
+Private disk contents
+---------------------
+The bundled system.vdi and software.vdi seeds are private copies of the user's
+existing FreeDOS machine, taken after guest shutdown. They may contain separately
+licensed installed software, personal configuration, and user-created files.
+Public redistribution of this APK or its disk seeds is NOT authorized merely by
+the fact that the emulator or operating system is open source. Review the rights
+and privacy of every bundled item before distributing the disk images.
+
+The APK is a private development-signed preview, not a hardened store release.
+Please consult README.txt for data-loss warnings and actual validation status.

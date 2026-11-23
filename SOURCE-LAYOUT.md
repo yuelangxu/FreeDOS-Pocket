@@ -11,10 +11,10 @@ The `source/` tree is the browsable part of the corresponding source:
 
 The original upstream source archives are deliberately not committed to Git:
 some individual archives exceed GitHub's ordinary 100 MiB Git-object limit,
-and the complete FreeDOS collection is over 1 GiB. The full, byte-preserved
-archives are attached to the `v0.3.17` Release alongside the APK. They are the
-corresponding source materials; the browsable tree here contains the project
+and the complete FreeDOS collection is over 1 GiB. The 0.3.19 engine source
+archive is attached to the `v0.3.19` Release. The unchanged FreeDOS collection
+remains attached to `v0.3.17`. The browsable tree here contains the project
 files that can be reviewed directly in GitHub.
 
-Do not treat the APK, disk images, private signing material, or personal game
-files as source. None of those are committed to this repository.
+Do not treat the APK, disk images, signing material, or installed DOS data as
+source. None of those are committed to this repository.
