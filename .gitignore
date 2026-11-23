@@ -1,0 +1,5 @@
+# Large release artifacts are attached to GitHub Releases, not committed.
+*.apk
+*.vdi
+*.img
+*.zip
