@@ -3,3 +3,5 @@
 *.vdi
 *.img
 *.zip
+*.tar.gz
+*.tar.xz
