@@ -1,0 +1,18 @@
+FreeDOS Pocket - content notice
+===============================
+
+This package creates new local disks on first launch. It does not contain saved
+games, personal files, test downloads, caches, credentials, or separately
+collected shareware.
+
+The C: environment is assembled from FreeDOS packages. FreeDOS is a collection
+of separately licensed programs, not one blanket licence. Package APPINFO data
+and licence documents remain inside the guest. Any redistributed build must be
+accompanied by the corresponding source and notices required by those licences.
+
+Official project and source information:
+https://freedos.org/download/
+https://www.freedos.org/about/devel/
+
+The Android emulator integration also has separate notices and source duties.
+See the distribution source bundle and the other files in this licenses folder.

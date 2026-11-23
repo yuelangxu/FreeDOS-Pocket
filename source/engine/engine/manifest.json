@@ -1,0 +1,977 @@
+{
+  "bytes_excluding_manifest": 80367138,
+  "excluded": [
+    "signing keys and passwords",
+    "private and public VDI disk images",
+    "games, saves, downloads, and caches",
+    "compiled shared libraries and native object files",
+    "Gradle/NDK build output",
+    "local.properties and machine-specific paths"
+  ],
+  "file_count_excluding_manifest": 106,
+  "files": [
+    {
+      "bytes": 2942,
+      "path": "BUILDING.md",
+      "sha256": "28a937a1c87d8d17864953c1fc150cd850703510edb972d2836a65537f0132c8"
+    },
+    {
+      "bytes": 84483,
+      "path": "licenses/COMPONENT-NOTICES.txt",
+      "sha256": "fda38f6a1bad4b773675cadf1e7556dca47958536487c88fdd2a97e5502a9456"
+    },
+    {
+      "bytes": 1084,
+      "path": "licenses/HOSTIME-MIT.txt",
+      "sha256": "9826e040123d09be9dfc4101cb4653471004f0d78439d0abaa2f29e9db9b6ba5"
+    },
+    {
+      "bytes": 18332,
+      "path": "licenses/Limbo-GPL-2.0.txt",
+      "sha256": "da0eca0fb517ac939d167924c9d4b3f8750a6b7191932ef2cb145acfa624ac7e"
+    },
+    {
+      "bytes": 4342,
+      "path": "native-inputs.json",
+      "sha256": "438bd2037ea125e51d71c6852e3358f50a02f4758a825d94fcf07082f0ec5ff9"
+    },
+    {
+      "bytes": 5448,
+      "path": "patches/SDL2-2.0.8-freedos-pocket.patch",
+      "sha256": "15b44836f59d97fbdda02d3b2c47523bcf0231d99c9924e15a3ae12d1841313f"
+    },
+    {
+      "bytes": 559082,
+      "path": "patches/glib-2.56.1-freedos-pocket.patch",
+      "sha256": "9ad30a113260b122fca65a276199a9004ec86f47caa1531b3896f8694a4087ad"
+    },
+    {
+      "bytes": 431,
+      "path": "patches/libffi-3.3-freedos-pocket.patch",
+      "sha256": "8c333779544b5d95db3b5ad7f7f759534928656f39ee6b745556d83f83a87754"
+    },
+    {
+      "bytes": 408,
+      "path": "patches/pixman-0.40.0-freedos-pocket.patch",
+      "sha256": "0dc92fc8fd10ba4c430494218cb68e167c9010b15cfd6965775dba31d6e1e951"
+    },
+    {
+      "bytes": 22767,
+      "path": "patches/qemu-5.1.0-freedos-pocket.patch",
+      "sha256": "ff36176a1d9b978658c76e6fecddfc0b34d8a56ca33cd735260c25c6c8f889b0"
+    },
+    {
+      "bytes": 1060,
+      "path": "project/android-app/app/AndroidManifest.xml",
+      "sha256": "d7f352e0ee7541ee3384cd9870a1e58bb31738d2782cf3e0edf5a2ba699cb672"
+    },
+    {
+      "bytes": 9893,
+      "path": "project/android-app/app/build.gradle",
+      "sha256": "1b66a6ca94977c0e9571e3252cbff49e0d7cfcbc599783cf947877adfdd23f36"
+    },
+    {
+      "bytes": 1823,
+      "path": "project/android-app/app/src/com/max2idea/android/limbo/jni/VMExecutor.java",
+      "sha256": "f09f542028884cb5400f63b3abcaf6364fa67818dd91e8d22c440b7d6a1858d1"
+    },
+    {
+      "bytes": 1713,
+      "path": "project/android-app/app/src/org/freedos/pocket/DosSerialBridge.java",
+      "sha256": "4e7b3f94124b4e1053bf79caf5e5bef0aa44305a12a1f5f2ccc1e28a9d9f8c30"
+    },
+    {
+      "bytes": 1609,
+      "path": "project/android-app/app/src/org/freedos/pocket/DosTextCodec.java",
+      "sha256": "0f025ff232a643eeee3d1364c699ce06957adff0f7e3862ef0d526c9964a875e"
+    },
+    {
+      "bytes": 26640,
+      "path": "project/android-app/app/src/org/freedos/pocket/DosView.java",
+      "sha256": "87658bc8fec8b0964d977556a20b15a6a7b4cb72192b162bafd0715108f62423"
+    },
+    {
+      "bytes": 15120,
+      "path": "project/android-app/app/src/org/freedos/pocket/Engine.java",
+      "sha256": "2f46874b6d84930d65ef0fe047ed249d528cd6423bbc617dcc8fd944c681641f"
+    },
+    {
+      "bytes": 17998,
+      "path": "project/android-app/app/src/org/freedos/pocket/MainActivity.java",
+      "sha256": "da182f8d394144fe3b0145e2330b46de26058f54d1541e45c4aee47dbb20e041"
+    },
+    {
+      "bytes": 748,
+      "path": "project/android-app/app/src/org/freedos/pocket/PasteText.java",
+      "sha256": "a9f137c320ce38c1e01105bc2e803882d9e4b552638b9fb8cc0d69f56c4f561f"
+    },
+    {
+      "bytes": 899,
+      "path": "project/android-app/app/src/org/freedos/pocket/SessionService.java",
+      "sha256": "a88e765a8be0f4896da550b559177b7726950961b61cf168bb36658628a0c5b7"
+    },
+    {
+      "bytes": 3444,
+      "path": "project/android-app/app/src/org/freedos/pocket/VgaText.java",
+      "sha256": "02437bd50b9e1978f8175c1866d67c666e178e9051943b0f8968aa1a05c6b03d"
+    },
+    {
+      "bytes": 5871,
+      "path": "project/android-app/app/src/org/libsdl/app/AudioDiagnostics.java",
+      "sha256": "f3087c61de28ef3ceee68bfad2fe72e4c3838a853969ebd64e98d93c7090e1aa"
+    },
+    {
+      "bytes": 2056,
+      "path": "project/android-app/app/src/org/libsdl/app/SDLActivity.java",
+      "sha256": "6a8ec70189577cd765a9509fc9cb74dc72be49c5354c98242daa27e18c7aacdd"
+    },
+    {
+      "bytes": 10109,
+      "path": "project/android-app/app/src/org/libsdl/app/SDLAudioManager.java",
+      "sha256": "c1545b5a656fac19e6d1b98ca6e220069dd5e293497158560f8d5c3acd21490e"
+    },
+    {
+      "bytes": 475,
+      "path": "project/android-app/app/src/org/libsdl/app/SDLControllerManager.java",
+      "sha256": "d0b87e877d1412939d6f4f3500b814fce991109a2ada769049f494e6f137d3e5"
+    },
+    {
+      "bytes": 826,
+      "path": "project/android-app/app/src/publicRelease/assets/licenses/PUBLIC-CONTENT-NOTICE.txt",
+      "sha256": "a1e0df82fe5e697c3db9bdc39a64406ba691ac713b9d7213a7197f4130793c11"
+    },
+    {
+      "bytes": 69,
+      "path": "project/android-app/build.gradle",
+      "sha256": "8ebf0602839be8fd4c06f07a93e45da6b4a04444fa1b38df8b9def9c1b5c8032"
+    },
+    {
+      "bytes": 77,
+      "path": "project/android-app/gradle.properties",
+      "sha256": "1a78f8d38b9b092290f9cb52978a0c3490ef7572ef4d9f3d32c4dbc1baf4fad0"
+    },
+    {
+      "bytes": 212,
+      "path": "project/android-app/settings.gradle",
+      "sha256": "7d807d0a7623dc4554f545d3c3db341d4ed2df4f1f302ca11190204ac4396412"
+    },
+    {
+      "bytes": 3399,
+      "path": "project/guest-tools/hostime/HOSTIME.ASM",
+      "sha256": "4a2f3252ced58dad2650a27c1c5cc76e82c0e709d727c358c38d17c13ae83a0a"
+    },
+    {
+      "bytes": 9677,
+      "path": "project/guest-tools/hostime/HOSTIME.LST",
+      "sha256": "b82f0c7d5ea6ffd3dbb8d9f05669c131eb4fa133352ed04d413008b421c4a5d0"
+    },
+    {
+      "bytes": 1084,
+      "path": "project/guest-tools/hostime/LICENSE",
+      "sha256": "9826e040123d09be9dfc4101cb4653471004f0d78439d0abaa2f29e9db9b6ba5"
+    },
+    {
+      "bytes": 924,
+      "path": "project/guest-tools/hostime/README.md",
+      "sha256": "bab0e86dea94e5f7ca043f1a8070c074771601bdd3986635a7316dcc7f6f0c08"
+    },
+    {
+      "bytes": 696,
+      "path": "project/native-jni/Android.mk",
+      "sha256": "598ba40077ae98f0b620cb16d52735b7ddf83bca4948122b8cdc5d1ee56ae4c5"
+    },
+    {
+      "bytes": 914,
+      "path": "project/native-jni/Application.mk",
+      "sha256": "66ced7a17362dcf048d1dc51eb30a073402faa1074f0abf922e0843a8509340f"
+    },
+    {
+      "bytes": 11686,
+      "path": "project/native-jni/Makefile",
+      "sha256": "76b8aba1b1be14754c399de19b2fcbc45b602be1371cd3d7f8d20cb586d45756"
+    },
+    {
+      "bytes": 1003,
+      "path": "project/native-jni/android-config/android-device-config/android-armv7a-softfp.mak",
+      "sha256": "85f5dd7588625f761ea5d997e89589ef9ee849116ffc2c56edeb66070debacde"
+    },
+    {
+      "bytes": 815,
+      "path": "project/native-jni/android-config/android-device-config/android-armv8.mak",
+      "sha256": "b31106be3d5719398fa9cb755c2a40049ca7c2ec8e9bd3a633c995f257db2a36"
+    },
+    {
+      "bytes": 3570,
+      "path": "project/native-jni/android-config/android-device-config/android-generic.mak",
+      "sha256": "118ecfbe28b24fe54f85d227828ae1583a5483122e5a88d4732bbdd49c8f79ae"
+    },
+    {
+      "bytes": 722,
+      "path": "project/native-jni/android-config/android-device-config/android-x86.mak",
+      "sha256": "85825d3573a5fe4be0236142ce22f4bb536ce3b7ba5202dd0d44ce9b3b14eeec"
+    },
+    {
+      "bytes": 766,
+      "path": "project/native-jni/android-config/android-device-config/android-x86_64.mak",
+      "sha256": "8fc38a9e9b49c5278a97b4adc6625911b595c1d9e6668489511ee842be88be45"
+    },
+    {
+      "bytes": 1959,
+      "path": "project/native-jni/android-config/android-limbo-config.mak",
+      "sha256": "66be8a1cb45fda1bcd68a08914e3aaef3255fe369e192849eccee2096f4c629c"
+    },
+    {
+      "bytes": 462,
+      "path": "project/native-jni/android-config/android-qemu-config-2.9.1.mak",
+      "sha256": "276d5b1ad7d5284c08ddbd2903d6f1c8c9ee9b6957e4112eea463bd01432abef"
+    },
+    {
+      "bytes": 393,
+      "path": "project/native-jni/android-config/android-qemu-config-5.1.0.mak",
+      "sha256": "b4fed909cc02762b7fbcf2722b83ac4ee5554f0a45fc3597cc3512b220ca81ab"
+    },
+    {
+      "bytes": 6030,
+      "path": "project/native-jni/android-config/android-qemu-config.mak",
+      "sha256": "ffecb726adbb64c3e3b26e796b871083a7f2f7374f17ab07c3e42975f43f95f3"
+    },
+    {
+      "bytes": 7285,
+      "path": "project/native-jni/android-limbo-build.mak",
+      "sha256": "c1268c400aa7f1d15ad6395e0b65972acd548870c03cb54d037af92e5310ccb8"
+    },
+    {
+      "bytes": 3243,
+      "path": "project/native-jni/android-qemu-build.mak",
+      "sha256": "2a537979eac164f67460e827c59d6f6f2050b81b08607d5b6ff69250c7cebedd"
+    },
+    {
+      "bytes": 509,
+      "path": "project/native-jni/compat/Android.mk",
+      "sha256": "9ce460bf9ca176902d97e042a95f191bccfa2181fd466ed7e86350e59f6d2c3b"
+    },
+    {
+      "bytes": 12,
+      "path": "project/native-jni/compat/include-dummy/stdio.h",
+      "sha256": "f7e963001dedede3882275294be8005f31808e764fca6b7259ed269cf5e4a613"
+    },
+    {
+      "bytes": 1008,
+      "path": "project/native-jni/compat/limbo_compat.c",
+      "sha256": "67e62e5e5e4bdb1d98d20208c4fe691a19e6809821f0457ef60651d339c466fb"
+    },
+    {
+      "bytes": 509,
+      "path": "project/native-jni/compat/limbo_compat.h",
+      "sha256": "58c8d536759d5088f4220becb4e5d95b43715ad74486c9beb3d19f799170a95f"
+    },
+    {
+      "bytes": 9492,
+      "path": "project/native-jni/compat/limbo_compat_filesystem.c",
+      "sha256": "59304e093ab0eb73dbdb78a2f5eacd1c977a223f98969a1438fabd9c3eb7bad7"
+    },
+    {
+      "bytes": 783,
+      "path": "project/native-jni/compat/limbo_compat_filesystem.h",
+      "sha256": "6620b492fbce392e63b2635b61a3c6e96cd7411d03083c2f5125833ed9c4a589"
+    },
+    {
+      "bytes": 96,
+      "path": "project/native-jni/compat/limbo_compat_macros.h",
+      "sha256": "00598d624035f8d26a5139ffe2c3945269244c03b9aca515567b79fd60f3c87f"
+    },
+    {
+      "bytes": 2279,
+      "path": "project/native-jni/compat/limbo_compat_qemu.c",
+      "sha256": "75ceb628752ea8948de1ca8826d53bcd0b5187f1850c0a542ad6abe0af45bf87"
+    },
+    {
+      "bytes": 219,
+      "path": "project/native-jni/compat/limbo_compat_qemu.h",
+      "sha256": "9128eadbbad82f0781d0f910c77f88c205161b6a6d465824f3f91f122ec9c966"
+    },
+    {
+      "bytes": 2281,
+      "path": "project/native-jni/compat/limbo_compat_signals.cpp",
+      "sha256": "7bedf9cfc681ebf26adf5a66cd002f7c920b716cb676d35c5fbd2601bea7d4f6"
+    },
+    {
+      "bytes": 329,
+      "path": "project/native-jni/compat/limbo_compat_signals.h",
+      "sha256": "d8743667b17727cc6178367a0a5f328a078cc30c20a8ef8337801c2402485244"
+    },
+    {
+      "bytes": 4782,
+      "path": "project/native-jni/compat/limbo_logutils.h",
+      "sha256": "97dc8bcb4be20d55db8e2a3133c4b7fd79fee137f8e919e337b74bfff0002aec"
+    },
+    {
+      "bytes": 399,
+      "path": "project/native-jni/compat/musl/Android.mk",
+      "sha256": "27135b6afd1a044e27a84daa65641e09d6077a2bf8348aa66ab3d5e7d07ca3d2"
+    },
+    {
+      "bytes": 161,
+      "path": "project/native-jni/compat/musl/compat_iconv.h",
+      "sha256": "8b7cc3f756164d340b84e20e4c7a4732d1ef03782b1ef6f8ce87f75555ec7284"
+    },
+    {
+      "bytes": 1854,
+      "path": "project/native-jni/compat/musl/include/iconv.h",
+      "sha256": "de2182325564e95e1b12c6c456ee1d25f500b98c0d12c3c1ab34dac4d90c903f"
+    },
+    {
+      "bytes": 813,
+      "path": "project/native-jni/compat/musl/libintl.h",
+      "sha256": "56f86bb2e0e045dcd40a8fe2df635e825d04a54c1a97340a8a509594471bb468"
+    },
+    {
+      "bytes": 73,
+      "path": "project/native-jni/compat/musl/musl-locale/README",
+      "sha256": "020fc7070698f8bb68d31c82180319737e0adf2a71f7c5d11bbdf6c9901527b0"
+    },
+    {
+      "bytes": 85279,
+      "path": "project/native-jni/compat/musl/musl-locale/big5.h",
+      "sha256": "e4e5b82e8ffeceb436f058c520a9148287d766997b4723083a80b429bf3f3f3b"
+    },
+    {
+      "bytes": 12782,
+      "path": "project/native-jni/compat/musl/musl-locale/codepages.h",
+      "sha256": "2b20b247f30fbdce408815dad8c4e55bfff3627b052315e92bb04543a69c7600"
+    },
+    {
+      "bytes": 146772,
+      "path": "project/native-jni/compat/musl/musl-locale/gb18030.h",
+      "sha256": "0c514651e17065c6ffd2807cabbedcd342add8249f8932bc1ddc262bbe9e6025"
+    },
+    {
+      "bytes": 29868,
+      "path": "project/native-jni/compat/musl/musl-locale/hkscs.h",
+      "sha256": "e6681dafda74d9c458417e6ce18de6fb827cbc315b778809644707a93555623c"
+    },
+    {
+      "bytes": 10365,
+      "path": "project/native-jni/compat/musl/musl-locale/iconv.c",
+      "sha256": "9b20be1e32d3441204609a2d9f3e624a5db2827882075c74cf07c276f14cd677"
+    },
+    {
+      "bytes": 1528,
+      "path": "project/native-jni/compat/musl/musl-locale/intl.c",
+      "sha256": "ad5e9f4a9b6adaf61376b3831e3e0b23e95c9876e1d8ad57c74143379c44a6a0"
+    },
+    {
+      "bytes": 43938,
+      "path": "project/native-jni/compat/musl/musl-locale/jis0208.h",
+      "sha256": "d1385710cdc79b258c1e74c50f5a291444ea567f1625b906dedfc487d9e10d1f"
+    },
+    {
+      "bytes": 51093,
+      "path": "project/native-jni/compat/musl/musl-locale/ksc.h",
+      "sha256": "34cc3bad662d4163d8367539dcc17842761f4fa9a58733c2b0efd5912b7f0b52"
+    },
+    {
+      "bytes": 3104,
+      "path": "project/native-jni/compat/musl/musl-locale/legacychars.h",
+      "sha256": "c352cc3cb5b49b9db33ace48f50f442e125875dbd6cbb0e8174758dda7101dcd"
+    },
+    {
+      "bytes": 138,
+      "path": "project/native-jni/compat/musl/musl-locale/libc.h",
+      "sha256": "04ed41af19a77fe1b6caa47f15c5080b8a9457f42fc1dc3d9eb3d33af2cc93f8"
+    },
+    {
+      "bytes": 27,
+      "path": "project/native-jni/compat/musl/musl-locale/libintl.h",
+      "sha256": "08eabef9a1863dc92f3a1ead7b7da61a53ea000cb221ded2a1355a8debcf94f3"
+    },
+    {
+      "bytes": 18578,
+      "path": "project/native-jni/compat/scsi/scsi.h",
+      "sha256": "43ad8ca9be16133f824c313c643a4fb13096daee078ae0b168648be509c72fdb"
+    },
+    {
+      "bytes": 1307,
+      "path": "project/native-jni/compat/scsi/scsi_ioctl.h",
+      "sha256": "43f69231217b3b7f25bf0a585c1e0aca00adc05229cfe6fe755b5a06fd3220cf"
+    },
+    {
+      "bytes": 14731,
+      "path": "project/native-jni/compat/scsi/sg.h",
+      "sha256": "a2f0121e340a26d5607d138831c3b39d2ac9f3054d8d6b6cfc03233e555bf1bf"
+    },
+    {
+      "bytes": 318,
+      "path": "project/native-jni/compat/sdl-addons/Android.mk",
+      "sha256": "2450d593671b0aedef8149976acee4807b414d267905f4c8731a169242c66c1d"
+    },
+    {
+      "bytes": 10888,
+      "path": "project/native-jni/compat/sdl-addons/SDL_limboaudio.c",
+      "sha256": "b50c94b8a4721bc3a3e76da0e0fff209d65850b6361a67ff2d214343b9fff22a"
+    },
+    {
+      "bytes": 1281,
+      "path": "project/native-jni/compat/sdl-addons/SDL_limboaudio.h",
+      "sha256": "4a2b9cba722ff88e83b5c5eb27cb3f69d796e3319cec0f0f219f3481595bbb7b"
+    },
+    {
+      "bytes": 351,
+      "path": "project/native-jni/compat/sdl-extensions/Android.mk",
+      "sha256": "ab73e404698faa5bab4e26420447e669bdd7030c7438de85357700738c3c16ef"
+    },
+    {
+      "bytes": 3766,
+      "path": "project/native-jni/compat/sdl-extensions/SDL_limbomouse.c",
+      "sha256": "1a100643eebd8147a7dffe723c3bf7d4b3d9d8871674baacb07addb0feb4f3b8"
+    },
+    {
+      "bytes": 1265,
+      "path": "project/native-jni/compat/sdl-extensions/SDL_limbomouse.h",
+      "sha256": "addb1a242cdf8ca3dc314ca86c3382de7b117d6ebc868fb764b681b023bf5230"
+    },
+    {
+      "bytes": 1145,
+      "path": "project/native-jni/compat/sdl-extensions/SDL_limboscreen.c",
+      "sha256": "a59b2f49daa651fdd54f00729bbf0b4886bc655eef2687004e6a51f3523eea6a"
+    },
+    {
+      "bytes": 1035,
+      "path": "project/native-jni/compat/sdl-extensions/SDL_limboscreen.h",
+      "sha256": "5ed96a79958fc86aca50cead138f3395dd360e049ce0402990650709f4bde682"
+    },
+    {
+      "bytes": 25,
+      "path": "project/native-jni/limbo/.gitignore",
+      "sha256": "a6643c2d5f0c066e0cc481d9f3109c1f09726de85d3de5183758664bf19c0bbb"
+    },
+    {
+      "bytes": 854,
+      "path": "project/native-jni/limbo/Android.mk",
+      "sha256": "99680f353ef680c7622d6d534e4bc7a01f7e00033f34cf52c0a70fc610d63597"
+    },
+    {
+      "bytes": 10082,
+      "path": "project/native-jni/limbo/vm-executor-jni.c",
+      "sha256": "280e46935bf774dd86738e585a966916bee2da0c2ca6862f4df700e1b53ca72c"
+    },
+    {
+      "bytes": 2815,
+      "path": "project/native-jni/limbo/vm-executor-jni.h",
+      "sha256": "2c7655da310657f64cf0a0f57007d156a097237b3e0f06d6ad17784787020c45"
+    },
+    {
+      "bytes": 107,
+      "path": "project/native-jni/patches/android.cache",
+      "sha256": "1941e70c1c7a6d5b5a44db33bd6b865facdcf26a4bbcb58a1cc83e18b651f2c1"
+    },
+    {
+      "bytes": 1895,
+      "path": "project/tools/Create-HostImeFloppy.py",
+      "sha256": "5f8f9ff6e86b96c8200b9712302e71cd41100d0465c59f10d380fb012378ed5b"
+    },
+    {
+      "bytes": 13239,
+      "path": "public-asset-hashes.json",
+      "sha256": "80f37c4cbc7ab9b1b49c3ed37bc6b19a6dce869d6e8d13d95a1d6b545651aa17"
+    },
+    {
+      "bytes": 1599,
+      "path": "rebuild/build-abi.sh",
+      "sha256": "e8b870338b8263a4731be8cf7164bb44cd1c4c44fc769403712ac6eed212e955"
+    },
+    {
+      "bytes": 1695,
+      "path": "rebuild/core.sh",
+      "sha256": "b50d6eb6e30bdb9fbbe97b3a371ebee42b9e0d22ceb0f59f2d8a5315434f4515"
+    },
+    {
+      "bytes": 4570,
+      "path": "rebuild/deps.sh",
+      "sha256": "b5efe213f07c2967149994db2195d335e6ac21e45b020001f5efc6cbe1823be4"
+    },
+    {
+      "bytes": 4422,
+      "path": "rebuild/prepare-native-tree.py",
+      "sha256": "53962148950a3d290bec5af9d9c6977497d9d1508ccdad141314788650473fd6"
+    },
+    {
+      "bytes": 2041,
+      "path": "rebuild/stage-public-assets.py",
+      "sha256": "82c565213cd9f029a4937afca8d46254e236d8e6007c67aa1861fee6426940a8"
+    },
+    {
+      "bytes": 4909017,
+      "path": "upstream/SDL2-2.0.8.tar.gz",
+      "sha256": "edc77c57308661d576e843344d8638e025a7818bff73f8fbfab09c3c5fd092ec"
+    },
+    {
+      "bytes": 8028716,
+      "path": "upstream/glib-2.56.1.tar.xz",
+      "sha256": "40ef3f44f2c651c7a31aedee44259809b6f03d3d20be44545cd7d177221c0b8d"
+    },
+    {
+      "bytes": 1305466,
+      "path": "upstream/libffi-3.3.tar.gz",
+      "sha256": "72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056"
+    },
+    {
+      "bytes": 923887,
+      "path": "upstream/limbo-887c6a68.tar.gz",
+      "sha256": "b676402dc3d7244f15bd4c47fab9b8bd169c8e844e4c1dfab4fe13523f864479"
+    },
+    {
+      "bytes": 913976,
+      "path": "upstream/pixman-0.40.0.tar.gz",
+      "sha256": "6d200dec3740d9ec4ec8d1180e25779c00bc749f94278c8b9021f5534db223fc"
+    },
+    {
+      "bytes": 62911540,
+      "path": "upstream/qemu-5.1.0.tar.xz",
+      "sha256": "c9174eb5933d9eb5e61f541cd6d1184cd3118dfe4c5c4955bc1bdc4d390fa4e5"
+    },
+    {
+      "bytes": 3582,
+      "path": "verify-archive.py",
+      "sha256": "6e18e755636e2793cde1f72d4db719898e56d91b37839828c7f2b73a8056a374"
+    },
+    {
+      "bytes": 7863,
+      "path": "verify.py",
+      "sha256": "350d57ee307738ab01715ae6cd72683853e9885de5c35c2bac2d8fe73efe7845"
+    }
+  ],
+  "name": "FreeDOS Pocket engine source companion",
+  "patches": [
+    {
+      "bytes": 22767,
+      "changed_files": [
+        {
+          "normalized_sha256": "f52276a6f15cbb2e111c4bdb5c7985f7a6cd2ab3229dd8e9113be78ee6e93426",
+          "path": "accel/kvm/kvm-all.c"
+        },
+        {
+          "normalized_sha256": "2c30e14c714f4f061c0b9f58e256ce5323d750f4f97e5d544075888bc1135cec",
+          "path": "audio/audio.c"
+        },
+        {
+          "normalized_sha256": "54a11f7f77999e7e7ebb1ab7441fa0691935fe393bec8de473c4b179ae448854",
+          "path": "audio/audio_legacy.c"
+        },
+        {
+          "normalized_sha256": "9ef48a006421bd7300ef78c7a590d5c324752e2878610b5cc4369af967bc1fce",
+          "path": "audio/sdlaudio.c"
+        },
+        {
+          "normalized_sha256": "da790155d9f08ded70a63a194457d50350980fad35e6d7255c86a5d7792847bf",
+          "path": "configure"
+        },
+        {
+          "normalized_sha256": "42a325c118d3165bba119e82f645cc003539a1489be50373d7f1a7472f561514",
+          "path": "exec.c"
+        },
+        {
+          "normalized_sha256": "806f8f284076af6069283e0a9a7334dc0ccef36340576dd45526e4553ad4f164",
+          "path": "hw/audio/sb16.c"
+        },
+        {
+          "normalized_sha256": "8f8be282af3b79fdacdf992decaa2f3a8e6b6ac735db87537608e87805cc32bd",
+          "path": "hw/display/vga.c"
+        },
+        {
+          "normalized_sha256": "93d131780f7712c4a8d17b747537873fbfc5722e7e49423d7057dcbbead79fde",
+          "path": "hw/display/vga_int.h"
+        },
+        {
+          "normalized_sha256": "38a4a48865dc93c7c2fb953c7adb310ae3300d516d9ee58dc34c4e3efe80f913",
+          "path": "hw/vfio/pci.c"
+        },
+        {
+          "normalized_sha256": "428421c3d0931514ce39a80426eac3ab005ae093369f5d6de72c6d62deebb282",
+          "path": "include/qemu/osdep.h"
+        },
+        {
+          "normalized_sha256": "b1132b41ecacffb1876c1eaff757b064eef874a6e58bc0b2652e5d0c9529962b",
+          "path": "include/ui/console.h"
+        },
+        {
+          "normalized_sha256": "8a832fb7c64157daf0c7bc2a378c2f3d43633fe66c0307fbb349206d62b44db1",
+          "path": "Makefile"
+        },
+        {
+          "normalized_sha256": "d57bc3e4b917df201ba27e995c6ab128c8837bf09585c65db8d7c470aefb7146",
+          "path": "Makefile.target"
+        },
+        {
+          "normalized_sha256": "897e6101739574d4e946fb9fb1e023627cc3cae5ec2419f36da5bc4b2b7dd47d",
+          "path": "monitor/misc.c"
+        },
+        {
+          "normalized_sha256": "eb73c22379539115ec14003fb4a05c1f8281bc965985f4226c2033dbae175eeb",
+          "path": "ui/console.c"
+        },
+        {
+          "normalized_sha256": "492a20bb12c7347267ed1f011bc0c188707e0c3497c08031f164090cad95eb0c",
+          "path": "ui/sdl2-2d.c"
+        },
+        {
+          "normalized_sha256": "da7c416accea72961e0a52c8c2360c30b5e37c11c4564df6de71d85f8e8c5239",
+          "path": "ui/sdl2.c"
+        },
+        {
+          "normalized_sha256": "3c3318d2d3602e7e6874eea98b491b6200b18d8f0f469d4ceeb3bcc225bdc1d5",
+          "path": "ui/vnc.c"
+        },
+        {
+          "normalized_sha256": "c6dbbf9daf5da13895aebd342ffd04646f2a7de352613e24d589418f3388e497",
+          "path": "util/Makefile.objs"
+        },
+        {
+          "normalized_sha256": "1163f11531a066a4afd8695030de225affce6ac228dd958c3f98d31099e4b4f7",
+          "path": "util/qemu-openpty.c"
+        }
+      ],
+      "name": "qemu-5.1.0-freedos-pocket.patch",
+      "sha256": "ff36176a1d9b978658c76e6fecddfc0b34d8a56ca33cd735260c25c6c8f889b0"
+    },
+    {
+      "bytes": 5448,
+      "changed_files": [
+        {
+          "normalized_sha256": "a9450818bf735682915d1160c9cc33d7efe39fccaed314af8f97e7d098a26037",
+          "path": "Android.mk"
+        },
+        {
+          "normalized_sha256": "5f63382849408d831e43d91fe217443c8b793a26b046e1f5c7a4d84b1c67fb3f",
+          "path": "src/core/android/SDL_android.c"
+        },
+        {
+          "normalized_sha256": "8df918aac1e12b6f7ca7254c96e1f2dbc6b749d1e1052d37a7386b87055de0e5",
+          "path": "src/events/SDL_mouse.c"
+        },
+        {
+          "normalized_sha256": "9e54bc36dee8b554fc720a1d0ec4c3a42884154ff20a83b9a9a82df140f79089",
+          "path": "src/render/opengles2/SDL_gles2funcs.h"
+        }
+      ],
+      "name": "SDL2-2.0.8-freedos-pocket.patch",
+      "sha256": "15b44836f59d97fbdda02d3b2c47523bcf0231d99c9924e15a3ae12d1841313f"
+    },
+    {
+      "bytes": 559082,
+      "changed_files": [
+        {
+          "normalized_sha256": "cedc72ad33309cab550ed1f3dcb93fe75e37305054f57860d1456a6012ac31b7",
+          "path": "aclocal.m4"
+        },
+        {
+          "normalized_sha256": "0ac2f7e893aed4585c7895278cc507e41b9279122511bad3686a36e4075b09c3",
+          "path": "build/Makefile.in"
+        },
+        {
+          "normalized_sha256": "2b87ae49d0452ac584137e3246f43888471b6b8b08d7b6215b6e3af1e43cc046",
+          "path": "build/win32/dirent/Makefile.in"
+        },
+        {
+          "normalized_sha256": "0c45aab1e921eb277f9b078c4f6687a9c9a2f62d794e160b3e79e6106a0ccb46",
+          "path": "build/win32/Makefile.in"
+        },
+        {
+          "normalized_sha256": "1361609603613f68846b38db28c5989e66e0ca4bbf4097526a47479ac66ff9bf",
+          "path": "compile"
+        },
+        {
+          "normalized_sha256": "ff7d2b677312896ac8d34ba44f6583a41a212dbcfe54547664deb0881843a102",
+          "path": "config.guess"
+        },
+        {
+          "normalized_sha256": "8fb5b7d7a10f93e46b9532a7bb9c182f2502d37f1624fb10d38f56bb45c8dcc4",
+          "path": "config.h.in"
+        },
+        {
+          "normalized_sha256": "52d7418817df4a0bd139446cf014f9dfd5bb3406a95c3109ca6fd578068be472",
+          "path": "config.sub"
+        },
+        {
+          "normalized_sha256": "c44f3ea53ef5a3b8da6112ca1b46a31351ae5c202f36057c4e4a3f3f946d2127",
+          "path": "configure"
+        },
+        {
+          "normalized_sha256": "e9bc9c563cc0d12730c904a1b69e07942b18fb3af09e5a8fc3774be0589a2c00",
+          "path": "configure.ac"
+        },
+        {
+          "normalized_sha256": "179f63aac7d7f40f8941d46948a715d706c4f1fc1e81f2f1c742220a288fad3b",
+          "path": "docs/Makefile.in"
+        },
+        {
+          "normalized_sha256": "5db091af559dbbe4783be1c239965ef77bf7333a488e57906042edd453ae6d6e",
+          "path": "docs/reference/gio/Makefile.in"
+        },
+        {
+          "normalized_sha256": "18102647f8ef154f73dcaafcaf94635fc8c6f07a76a666e8fea83642b88736f1",
+          "path": "docs/reference/glib/Makefile.in"
+        },
+        {
+          "normalized_sha256": "1eaa23eb05aa4bf04d014661bf8a1c6309cde9f8363fca9506bfd86f54051ab5",
+          "path": "docs/reference/gobject/Makefile.in"
+        },
+        {
+          "normalized_sha256": "513596deca012e089967496b79f4712739a2d427814da8313b5407625b33b0bb",
+          "path": "docs/reference/Makefile.in"
+        },
+        {
+          "normalized_sha256": "6eaf3c0dc4e9cb87afe2fc26998f8648cbd8bccb86ebc98fcc786360393b4b6d",
+          "path": "gio/fam/Makefile.in"
+        },
+        {
+          "normalized_sha256": "87be976191f630ab29f3985870050790dc102907651f91d49b35eb4d3bfbec8d",
+          "path": "gio/gdbus-2.0/codegen/Makefile.in"
+        },
+        {
+          "normalized_sha256": "51df2ac6eab2bd19c84f6cb8eb2451699421987ea53f710a57c3712d0ecca3ce",
+          "path": "gio/inotify/Makefile.in"
+        },
+        {
+          "normalized_sha256": "6036cd68f11cb59e9f5ee0094362391cf93d63f4306dad8c733acdd20227edd9",
+          "path": "gio/kqueue/Makefile.in"
+        },
+        {
+          "normalized_sha256": "a15192df395cee7343e78e1317c21c1d0fae0d494d736fceed60bf9b9d73d060",
+          "path": "gio/Makefile.in"
+        },
+        {
+          "normalized_sha256": "43812f26683814da0bf69513316f9207f7065d932c2271184eb1dfc4337c6167",
+          "path": "gio/tests/gdbus-object-manager-example/Makefile.in"
+        },
+        {
+          "normalized_sha256": "9a6b82604231237690312fa043cc8138a87719d7c78cd343458e5598058015e7",
+          "path": "gio/tests/Makefile.in"
+        },
+        {
+          "normalized_sha256": "37bf1156b0598769ccb19c72a3062c2c1cf056e5158e5e346691e7ea6bf0b04f",
+          "path": "gio/tests/modules/Makefile.in"
+        },
+        {
+          "normalized_sha256": "0c42928f7dac4a4e96f5a80423eee7c176a7db6bc7c1af822b1ffcc6fed5d093",
+          "path": "gio/tests/services/Makefile.in"
+        },
+        {
+          "normalized_sha256": "bb725ed3a7a3f75cf3685941b3c0cf9253f6f3012dba84e56cf410179dce74ad",
+          "path": "gio/win32/Makefile.in"
+        },
+        {
+          "normalized_sha256": "a3f4d3c24e6c5b5b10f775bce1afc2506b308bbff584a3d6c857123d43d15c94",
+          "path": "gio/xdgmime/Makefile.in"
+        },
+        {
+          "normalized_sha256": "5a49d610b0cdf13ffadd8b0d7d5b3c44a2516ce59682af9e0eabd4e47e124e1a",
+          "path": "glib/gatomic.h"
+        },
+        {
+          "normalized_sha256": "df1f752ba65743bd985a4524864a421e71e50b48b67a658b6bd41a7979d10e5d",
+          "path": "glib/gbacktrace.c"
+        },
+        {
+          "normalized_sha256": "478fbaaf2ebd7ebec8d8aadb1ebe700d1950fd93a0dd353af81e8cb5d16bba83",
+          "path": "glib/gnulib/Makefile.in"
+        },
+        {
+          "normalized_sha256": "a2bfe52877222d67dadbe9158b3dd49a86ea719fe565ed309749554cf7472999",
+          "path": "glib/gpoll.c"
+        },
+        {
+          "normalized_sha256": "8c92d0ac70891e6f80beb685785e38a646ae009083b804eea942a6bece5face6",
+          "path": "glib/libcharset/Makefile.in"
+        },
+        {
+          "normalized_sha256": "0d30543b9a3d2c831f03d63d659dd2be73cb1405ab5c3aac135e13800f7f593e",
+          "path": "glib/Makefile.in"
+        },
+        {
+          "normalized_sha256": "619aa9a55c1e844e2c36d389b59668c6488a883ab82dc9719386ca1d7ba5c736",
+          "path": "glib/pcre/Makefile.in"
+        },
+        {
+          "normalized_sha256": "e1f8b16a6e4b2bbbd478d1fa7bc85cd1ad1da992598f43ba1a08a9c2bf4b43fe",
+          "path": "glib/tests/Makefile.in"
+        },
+        {
+          "normalized_sha256": "d01fbb9701ce53a955a4f5a45a65502b64587fe9da9a71cbc3565f02f722b847",
+          "path": "glib/update-pcre/Makefile.in"
+        },
+        {
+          "normalized_sha256": "527bf104e51c74a82c5b962dc751e9a00f7c2daacbccec4e2d0f638abc96a243",
+          "path": "gmodule/Makefile.in"
+        },
+        {
+          "normalized_sha256": "3d556c0495ed902e0ed2493e51a9ccef9d1dd3be8002992db813bc555ce3d180",
+          "path": "gobject/Makefile.in"
+        },
+        {
+          "normalized_sha256": "c7055f2fc89dba125b11ae21c0d14fb557fb7cc3c85c3c8077462590576f89f1",
+          "path": "gobject/tests/Makefile.in"
+        },
+        {
+          "normalized_sha256": "a157ef28122a9023649a139c3e52431778d42c801aa2dafca54f932fe366a841",
+          "path": "gthread/Makefile.in"
+        },
+        {
+          "normalized_sha256": "2eaeab3777aeb072251b791dd74e74f6bc38ad54db39f67ad905476942b2687c",
+          "path": "gtk-doc.make"
+        },
+        {
+          "normalized_sha256": "54be5efe708bd5a7b433ab227130c5548221151698d17eb7eb142f640cf291ec",
+          "path": "INSTALL"
+        },
+        {
+          "normalized_sha256": "22a0826522bfb9be7120cd416ccdf496dbb0f0f2eda06984f273bc7a03f2c2ac",
+          "path": "ltmain.sh"
+        },
+        {
+          "normalized_sha256": "3a6a898ce92e035a4c25d8f74e3eb5252ceed5408a5e0ef3d1f4880db44ce2fe",
+          "path": "m4macros/libtool.m4"
+        },
+        {
+          "normalized_sha256": "2b725d300784a63d5e71aaeac011e11b5b22f6f6017c29967085447632a7e0ae",
+          "path": "m4macros/ltoptions.m4"
+        },
+        {
+          "normalized_sha256": "8a19df00dbbbb911d0e633d88e53c1bdce4b722469d43a105ed2d77e8a7b4dd8",
+          "path": "m4macros/ltsugar.m4"
+        },
+        {
+          "normalized_sha256": "0275a2fb0b5f0cf402a9e03bfa99722da9f603ca03d81ba911ae7573558577dc",
+          "path": "m4macros/ltversion.m4"
+        },
+        {
+          "normalized_sha256": "e35bdbd17dcd0216a2b8a6148ffb5edb941e27f8f90eba8ba7c520043821af4e",
+          "path": "m4macros/lt~obsolete.m4"
+        },
+        {
+          "normalized_sha256": "6682a75d41bed61e510ce3398e0f84bf71ceefb2a0b1c85b287972f34925d550",
+          "path": "m4macros/Makefile.in"
+        },
+        {
+          "normalized_sha256": "af3b88e342ab22fe77bcc91dae7eeb59ce46295285cec58f8dbbdab447e30db1",
+          "path": "Makefile.in"
+        },
+        {
+          "normalized_sha256": "d7dcc6f563ab74eb58fb9a85afc1f90fcc267af53f34267540e5931efa657ae8",
+          "path": "tests/gobject/Makefile.in"
+        },
+        {
+          "normalized_sha256": "a07e272b4c3d7615c74e01bc56e6aab04c989f4819fe5435124a391857757580",
+          "path": "tests/Makefile.in"
+        },
+        {
+          "normalized_sha256": "b52ddcea1c7fd88053a186a81c1d7f38105d1b2cc905d40d0dc19543eaa150cb",
+          "path": "tests/refcount/Makefile.in"
+        },
+        {
+          "normalized_sha256": "89ba56df1c0238073f57820c47ee755bcb3bedcac3dc3fc6060d3c58c521f4c9",
+          "path": "win32/Makefile.in"
+        },
+        {
+          "normalized_sha256": "53f8bda93c727335f8272f99fe76a022c6c3df04aa2cdfacc4fe2f82ba214efa",
+          "path": "win32/vs10/Makefile.in"
+        },
+        {
+          "normalized_sha256": "3782fceb25ddb112a5c2bf97886fef234800ec4576aa8e3c666592d661aa525f",
+          "path": "win32/vs11/Makefile.in"
+        },
+        {
+          "normalized_sha256": "250a262fc0ea6e055d37087c5afd90553a99d5ca00cba8eea257b317921fb381",
+          "path": "win32/vs12/Makefile.in"
+        },
+        {
+          "normalized_sha256": "954fc4f9ff33339eb55f5f9d367e8be73d6998d953292b76f245e37158d97c1e",
+          "path": "win32/vs14/Makefile.in"
+        },
+        {
+          "normalized_sha256": "83fd9eb8ee99d9a3ac1cc8102c29218423e6c1ee666a6a760d5d53865140835f",
+          "path": "win32/vs15/Makefile.in"
+        },
+        {
+          "normalized_sha256": "41f947129c242adf40f87fcabf91d259ca91c111bd246e98dc6d762b934c4ec7",
+          "path": "win32/vs9/Makefile.in"
+        }
+      ],
+      "name": "glib-2.56.1-freedos-pocket.patch",
+      "sha256": "9ad30a113260b122fca65a276199a9004ec86f47caa1531b3896f8694a4087ad"
+    },
+    {
+      "bytes": 408,
+      "changed_files": [
+        {
+          "normalized_sha256": "b00751266d981ce2b0f7271e68fdb87eeb8086404085e30366d89d6098db672a",
+          "path": "pixman/pixman-bits-image.c"
+        }
+      ],
+      "name": "pixman-0.40.0-freedos-pocket.patch",
+      "sha256": "0dc92fc8fd10ba4c430494218cb68e167c9010b15cfd6965775dba31d6e1e951"
+    },
+    {
+      "bytes": 431,
+      "changed_files": [
+        {
+          "normalized_sha256": "5b5e80b7d4be61810117664083c645bc464362a3e56d510f969f4f767de9695f",
+          "path": "src/aarch64/ffi.c"
+        },
+        {
+          "normalized_sha256": "2072840748e7f5d0e18d95764a4217636bec6fbd228bc4a48b985c73b01b147b",
+          "path": "src/raw_api.c"
+        }
+      ],
+      "name": "libffi-3.3-freedos-pocket.patch",
+      "sha256": "8c333779544b5d95db3b5ad7f7f759534928656f39ee6b745556d83f83a87754"
+    }
+  ],
+  "release": "0.3.17-public",
+  "schema_version": 1,
+  "upstream_archives": [
+    {
+      "bytes": 62911540,
+      "license": "GPL-2.0 with file-level compatible licenses",
+      "name": "qemu-5.1.0.tar.xz",
+      "sha256": "c9174eb5933d9eb5e61f541cd6d1184cd3118dfe4c5c4955bc1bdc4d390fa4e5",
+      "url": "https://download.qemu.org/qemu-5.1.0.tar.xz"
+    },
+    {
+      "bytes": 4909017,
+      "license": "zlib",
+      "name": "SDL2-2.0.8.tar.gz",
+      "sha256": "edc77c57308661d576e843344d8638e025a7818bff73f8fbfab09c3c5fd092ec",
+      "url": "https://www.libsdl.org/release/SDL2-2.0.8.tar.gz"
+    },
+    {
+      "bytes": 8028716,
+      "license": "LGPL-2.1-or-later",
+      "name": "glib-2.56.1.tar.xz",
+      "sha256": "40ef3f44f2c651c7a31aedee44259809b6f03d3d20be44545cd7d177221c0b8d",
+      "url": "https://download.gnome.org/sources/glib/2.56/glib-2.56.1.tar.xz"
+    },
+    {
+      "bytes": 913976,
+      "license": "MIT",
+      "name": "pixman-0.40.0.tar.gz",
+      "sha256": "6d200dec3740d9ec4ec8d1180e25779c00bc749f94278c8b9021f5534db223fc",
+      "url": "https://www.cairographics.org/releases/pixman-0.40.0.tar.gz"
+    },
+    {
+      "bytes": 1305466,
+      "license": "MIT",
+      "name": "libffi-3.3.tar.gz",
+      "sha256": "72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056",
+      "url": "https://sourceware.org/pub/libffi/libffi-3.3.tar.gz"
+    },
+    {
+      "bytes": 923887,
+      "commit": "887c6a68cd6b414377d7f8071bc12bbc16e59809",
+      "license": "GPL-2.0-or-later with bundled third-party notices",
+      "name": "limbo-887c6a68.tar.gz",
+      "sha256": "b676402dc3d7244f15bd4c47fab9b8bd169c8e844e4c1dfab4fe13523f864479",
+      "url": "https://github.com/limboemu/limbo.git"
+    }
+  ]
+}

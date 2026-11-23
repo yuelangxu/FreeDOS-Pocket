@@ -1,0 +1,20 @@
+--- a/src/aarch64/ffi.c
++++ b/src/aarch64/ffi.c
+@@ -25,6 +25,7 @@
+ #include <stdint.h>
+ #include <fficonfig.h>
+ #include <ffi.h>
++#include <string.h>
+ #include <ffi_common.h>
+ #include "internal.h"
+ #ifdef _M_ARM64
+--- a/src/raw_api.c
++++ b/src/raw_api.c
+@@ -27,6 +27,7 @@
+ /* This file defines generic functions for use with the raw api. */
+ 
+ #include <ffi.h>
++#include <string.h>
+ #include <ffi_common.h>
+ 
+ #if !FFI_NO_RAW_API

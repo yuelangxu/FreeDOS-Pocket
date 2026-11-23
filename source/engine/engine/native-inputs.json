@@ -1,0 +1,69 @@
+{
+  "baselineSourceZipSHA256": "e9201351ca3aefefb7a16c4ce2a5d78a1547dd1d166df06484f49fcc8e6f9871",
+  "compiler": "Android NDK r28, 28.0.13004108 (Windows x86_64)",
+  "libraries": {
+    "arm64-v8a": {
+      "libSDL2.so": "94b9e832d3330c7cfa57b2d8cd79306dc5828199e460815518cffd4b284aa91c",
+      "libcompat-SDL2-addons.so": "e9d997b3611d68c8f0dc17d9c2ab20448a033f18b360ff0fc3f1667b4c6e2eb3",
+      "libcompat-SDL2-ext.so": "29edb404829215196f07dd0be49eef33f553535f7cd78bb6c7cac3931b4e8bbd",
+      "libcompat-limbo.so": "cac2740dab1e3cd544811a0d60e54769cde79f548119a710b79548ca19eac49c",
+      "libcompat-musl.so": "b91756261be29c322b55138a600cc713c52feb15289eb04a193f638a23db5170",
+      "libglib-2.0.so": "c429ffb28edc98211dff64cba545add7e552e685cb14cd4bd39e9c66367ca32d",
+      "liblimbo.so": "3307b56891b75b56fb6096acdf9be90c8ec891719cea7470083639cb3160d591",
+      "libpixman-1.so": "1949f30399b93aaf583c381f9a12bd3ea4b5fec1a0b9fc5f222408f5f5a5218f",
+      "libqemu-system-x86_64.so": "e05c14ccd5b8d850ba5dc0edc089ae93f2ae6d04d4c28d3cbb9139d7d5cdbdab"
+    },
+    "armeabi-v7a": {
+      "libSDL2.so": "2cc0eae5ee9342340ce221e7b7dafc978d85be18d2e833279e0d940d3e4d6705",
+      "libcompat-SDL2-addons.so": "4d951f9038b5b89f9f47e82e447a66387ecbe35368de6c24b9509c0feacefa58",
+      "libcompat-SDL2-ext.so": "971de4bab6c7222a367f4e9f64542d160f803f16f9da3c58fe0d437077fb2c44",
+      "libcompat-limbo.so": "fcbce808c79ca4e2024257755d9af46f1779625a810bd95715d8879612142cde",
+      "libcompat-musl.so": "1892378b01f615b6c9fc8163d62c2d86e87ed47f10397c0abe08c82dc42740fe",
+      "libglib-2.0.so": "e0000a99cd18e1a91b1e1a2e87a7d431cb666957af997e6c64d51b72199b3496",
+      "liblimbo.so": "0caa0a89424b336c49acba2d90c249b7516994fcbf9c9fe3fc1a93de59186a48",
+      "libpixman-1.so": "e7508f40d442ef2fbf86529a8d02e98f29e74bfe763ab93c4387ee3dbefcbe90",
+      "libqemu-system-x86_64.so": "bf02d0a14feeba30e1470f1fcd7a394c5388f47475d245bb44116cd898c6510c"
+    },
+    "x86": {
+      "libSDL2.so": "e345bd031700f0deaddcef2e20201c0cb6a6d8f26b152e39141997e38cf7210a",
+      "libcompat-SDL2-addons.so": "2c29c5f86e0676501d2edf82b42dfba71593e3cced46149f6bb23c1e8dce3c20",
+      "libcompat-SDL2-ext.so": "26e1784f3f8d8a1d5134997ea67d6f376f9889958e0b78bd76ba404aac3e8bbc",
+      "libcompat-limbo.so": "5f7bfb93e3f40cdc2e1ab65b4a8feaf6024515a679836014b393e18b7b0f0d65",
+      "libcompat-musl.so": "79cec755fd2e163eccc41939bc0a6f20e0099af937919b422d1a9530f63fd7fb",
+      "libglib-2.0.so": "2dd59ab849801d24c6ceb7c2cec455e64febdaac29316dcbdc4a68edad354731",
+      "liblimbo.so": "325ea4193220c0ba2ecf49bb78a550e539a37faec32ada0b90c1d6d89869ec1b",
+      "libpixman-1.so": "d3f185297f857807309741a091c14bca551c9f7e1e89248e8b7ef830066f32da",
+      "libqemu-system-x86_64.so": "dbb4ed84fa1450ecb4aff47f920e5603b09b2975e804dd118bb78a7a01355054"
+    },
+    "x86_64": {
+      "libSDL2.so": "d2a807a7c9ef7c4e7c709b144cfbca387327c707cdad2eb9690f8d52f52a108b",
+      "libcompat-SDL2-addons.so": "53f8097be020dae5bbe4fb0a497831fc935ea9c9d108b593bde9909e2499d97e",
+      "libcompat-SDL2-ext.so": "0f602dd64de716436421fd490b3af75630529b12dc72a109f425f4cb09365937",
+      "libcompat-limbo.so": "6a2eac6f88ce5e4a183e98eb712dd7ef070afa789a4f14af3d48599e6a4ed6a9",
+      "libcompat-musl.so": "663adefb9206e60840d7aec9d95925399c43f03f2d3f974a2a5a3d0ec760c1fd",
+      "libglib-2.0.so": "c3151dfc6079cec52cded6c07a1025300b426561338494dceffd6ef567fcd909",
+      "liblimbo.so": "7810f26669a848c07bd36b093f6c7729ba8eafe1014256db734425d8c8e8720b",
+      "libpixman-1.so": "106570c49b40050a9232d09e3a88532bdf589296849ff7e0ca16d919a6e0c50f",
+      "libqemu-system-x86_64.so": "0255d594e693ab1e2251b759e7ee3e84f557ac352804fdddc67f8619b4f88c5d"
+    }
+  },
+  "method": "ARM64: exact match with prior public APK and retained obj/local. Other ABIs: stripped native-stage file hashes match per-ABI static-build audit. All compared to selected release APK.",
+  "sourceChecks": {
+    "arm64-v8a": {
+      "jniIntegrationFilesChecked": 58,
+      "modifiedUpstreamFilesChecked": 87
+    },
+    "armeabi-v7a": {
+      "jniIntegrationFilesChecked": 58,
+      "modifiedUpstreamFilesChecked": 87
+    },
+    "x86": {
+      "jniIntegrationFilesChecked": 58,
+      "modifiedUpstreamFilesChecked": 87
+    },
+    "x86_64": {
+      "jniIntegrationFilesChecked": 58,
+      "modifiedUpstreamFilesChecked": 87
+    }
+  }
+}

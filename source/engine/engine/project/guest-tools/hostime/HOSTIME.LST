@@ -1,0 +1,154 @@
+     1                                  ; FreeDOS Pocket host-text receiver. SPDX-License-Identifier: MIT
+     2                                  ; Receives one byte at a time on COM1, puts it in the BIOS keyboard buffer,
+     3                                  ; then echoes that byte as an acknowledgement. NASM: nasm -f bin -o HOSTIME.COM
+     4                                  
+     5                                  bits 16
+     6                                  org 100h
+     7                                  
+     8                                  start:
+     9 00000000 EB71                        jmp install
+    10                                  
+    11 00000002 00000000                old_int1c: dd 0
+    12                                  
+    13                                  timer_handler:
+    14 00000006 EB04                        jmp short timer_body
+    15 00000008 46444849                    db 'FDHI'                    ; installation signature at vector+2
+    16                                  timer_body:
+    17 0000000C 50                          push ax
+    18 0000000D 53                          push bx
+    19 0000000E 51                          push cx
+    20 0000000F 52                          push dx
+    21 00000010 1E                          push ds
+    22 00000011 06                          push es
+    23                                  
+    24                                      ; Do not consume a serial byte unless the BIOS keyboard ring has room.
+    25 00000012 B84000                      mov ax,40h
+    26 00000015 8EC0                        mov es,ax
+    27 00000017 268B1E1C00                  mov bx,[es:1ch]              ; current tail
+    28 0000001C 89D9                        mov cx,bx
+    29 0000001E 83C102                      add cx,2
+    30 00000021 263B0E8200                  cmp cx,[es:82h]              ; enhanced BIOS buffer end
+    31 00000026 7205                        jb .next_ready
+    32 00000028 268B0E8000                  mov cx,[es:80h]              ; wrap to buffer start
+    33                                  .next_ready:
+    34 0000002D 263B0E1A00                  cmp cx,[es:1ah]              ; next tail would equal head: full
+    35 00000032 7434                        je .chain
+    36                                  
+    37 00000034 BAFD03                      mov dx,3fdh                  ; COM1 line status
+    38 00000037 EC                          in al,dx
+    39 00000038 A801                        test al,1                    ; data ready
+    40 0000003A 742C                        jz .chain
+    41 0000003C BAF803                      mov dx,3f8h
+    42 0000003F EC                          in al,dx
+    43 00000040 08C0                        or al,al
+    44 00000042 740D                        jz .ack_byte                 ; zero is a host handshake, not guest text
+    45 00000044 268807                      mov [es:bx],al               ; ASCII byte, scan code zero
+    46 00000047 26C6470100                  mov byte [es:bx+1],0
+    47 0000004C 26890E1C00                  mov [es:1ch],cx
+    48                                  
+    49                                      ; Echo the accepted byte. A host waits for this before sending the next.
+    50                                  .ack_byte:
+    51 00000051 88C4                        mov ah,al
+    52 00000053 BAFD03                      mov dx,3fdh
+    53 00000056 B94000                      mov cx,64
+    54                                  .tx_wait:
+    55 00000059 EC                          in al,dx
+    56 0000005A A820                        test al,20h                  ; transmitter holding register empty
+    57 0000005C 7504                        jnz .tx_ready
+    58 0000005E E2F9                        loop .tx_wait
+    59 00000060 EB06                        jmp short .chain             ; keyboard byte is already committed
+    60                                  .tx_ready:
+    61 00000062 BAF803                      mov dx,3f8h
+    62 00000065 88E0                        mov al,ah
+    63 00000067 EE                          out dx,al
+    64                                  
+    65                                  .chain:
+    66 00000068 07                          pop es
+    67 00000069 1F                          pop ds
+    68 0000006A 5A                          pop dx
+    69 0000006B 59                          pop cx
+    70 0000006C 5B                          pop bx
+    71 0000006D 58                          pop ax
+    72 0000006E 2EFF2E[0200]                jmp far [cs:old_int1c]
+    73                                  
+    74                                  install:
+    75 00000073 0E                          push cs
+    76 00000074 1F                          pop ds
+    77 00000075 B81C35                      mov ax,351ch
+    78 00000078 CD21                        int 21h                      ; ES:BX = current INT 1Ch
+    79 0000007A 26807F0246                  cmp byte [es:bx+2],'F'
+    80 0000007F 7521                        jne .not_installed
+    81 00000081 26807F0344                  cmp byte [es:bx+3],'D'
+    82 00000086 751A                        jne .not_installed
+    83 00000088 26807F0448                  cmp byte [es:bx+4],'H'
+    84 0000008D 7513                        jne .not_installed
+    85 0000008F 26807F0549                  cmp byte [es:bx+5],'I'
+    86 00000094 750C                        jne .not_installed
+    87 00000096 BA[F900]                    mov dx,already_msg
+    88 00000099 B409                        mov ah,9
+    89 0000009B CD21                        int 21h
+    90 0000009D B8004C                      mov ax,4c00h
+    91 000000A0 CD21                        int 21h
+    92                                  
+    93                                  .not_installed:
+    94 000000A2 891E[0200]                  mov [old_int1c],bx
+    95 000000A6 8C06[0400]                  mov [old_int1c+2],es
+    96                                  
+    97                                      ; 115200 baud, 8 data bits, no parity, one stop bit, FIFO enabled.
+    98 000000AA FA                          cli
+    99 000000AB BAF903                      mov dx,3f9h                  ; interrupt enable
+   100 000000AE 30C0                        xor al,al
+   101 000000B0 EE                          out dx,al
+   102 000000B1 BAFB03                      mov dx,3fbh                  ; divisor latch access
+   103 000000B4 B080                        mov al,80h
+   104 000000B6 EE                          out dx,al
+   105 000000B7 BAF803                      mov dx,3f8h                  ; divisor low = 1
+   106 000000BA B001                        mov al,1
+   107 000000BC EE                          out dx,al
+   108 000000BD 42                          inc dx                       ; divisor high = 0
+   109 000000BE 30C0                        xor al,al
+   110 000000C0 EE                          out dx,al
+   111 000000C1 BAFB03                      mov dx,3fbh
+   112 000000C4 B003                        mov al,3                     ; 8N1
+   113 000000C6 EE                          out dx,al
+   114 000000C7 BAFA03                      mov dx,3fah
+   115 000000CA B0C7                        mov al,0c7h                  ; enable and clear 16550 FIFOs
+   116 000000CC EE                          out dx,al
+   117 000000CD BAFC03                      mov dx,3fch
+   118 000000D0 B00B                        mov al,0bh                   ; DTR, RTS, OUT2
+   119 000000D2 EE                          out dx,al
+   120                                      ; Drop any byte left by a client that timed out before this TSR existed.
+   121                                  .flush_rx:
+   122 000000D3 BAFD03                      mov dx,3fdh
+   123 000000D6 EC                          in al,dx
+   124 000000D7 A801                        test al,1
+   125 000000D9 7406                        jz .flushed
+   126 000000DB BAF803                      mov dx,3f8h
+   127 000000DE EC                          in al,dx
+   128 000000DF EBF2                        jmp short .flush_rx
+   129                                  .flushed:
+   130 000000E1 FB                          sti
+   131                                  
+   132 000000E2 BA[0600]                    mov dx,timer_handler
+   133 000000E5 B81C25                      mov ax,251ch
+   134 000000E8 CD21                        int 21h
+   135 000000EA BA[1901]                    mov dx,installed_msg
+   136 000000ED B409                        mov ah,9
+   137 000000EF CD21                        int 21h
+   138 000000F1 BA2600                      mov dx,(resident_end-$$+100h+15)/16 ; paragraphs from PSP
+   139 000000F4 B80031                      mov ax,3100h
+   140 000000F7 CD21                        int 21h
+   141                                  
+   142 000000F9 484F5354494D452069-     already_msg:   db 'HOSTIME is already installed.',13,10,'$'
+   142 00000102 7320616C7265616479-
+   142 0000010B 20696E7374616C6C65-
+   142 00000114 642E0D0A24         
+   143 00000119 484F5354494D452069-     installed_msg: db 'HOSTIME installed: COM1 115200, GB2312/raw byte bridge.',13,10,'$'
+   143 00000122 6E7374616C6C65643A-
+   143 0000012B 20434F4D3120313135-
+   143 00000134 3230302C2047423233-
+   143 0000013D 31322F726177206279-
+   143 00000146 746520627269646765-
+   143 0000014F 2E0D0A24           
+   144                                  resident_end:
+   145                                  

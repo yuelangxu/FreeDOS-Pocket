@@ -22,6 +22,11 @@ The release also contains the corresponding engine source and unchanged
 FreeDOS guest-source archive. The ZIP files are source/distribution materials,
 not additional installers.
 
+The application integration and patch files are browsable in the [`source/`](source/)
+directory. The complete upstream source collections remain attached to the
+release because GitHub's normal Git object limit does not allow some of their
+individual archive files; see [SOURCE-LAYOUT.md](SOURCE-LAYOUT.md).
+
 ## Checksums
 
 ```text

@@ -1,0 +1,187 @@
+plugins { id 'com.android.application' }
+def otherProbeAbi = providers.gradleProperty('fdpProbeAbi').orElse('x86_64').get()
+if (!(otherProbeAbi in ['x86_64','armeabi-v7a','x86'])) throw new GradleException('Unsupported fdpProbeAbi')
+def otherNativeStage = rootProject.file("build/compat-probe-native/${otherProbeAbi}")
+// app/jniLibs also contains historical binaries for other architectures. Never
+// merge that whole tree with the new x86_64 build or pick an arbitrary duplicate.
+def publicNative = tasks.register('stageVerifiedPublicNative', Sync) {
+    from('jniLibs') { include 'arm64-v8a/*.so' }
+    from(rootProject.file('build/compat-probe-native/x86_64')) { include 'x86_64/*.so' }
+    into(layout.buildDirectory.dir('generated/public0316Jni'))
+}
+// Four-ABI source rebuilds provide a tree of freshly built libraries explicitly.
+// Never discover old prebuilts from app/jniLibs when building this variant.
+def universalNative = rootProject.file(providers.gradleProperty('fdpUniversalNative').orElse('build/verified-public0317-inputs').get())
+def universalAbis = ['arm64-v8a','armeabi-v7a','x86','x86_64']
+def checkUniversal = tasks.register('checkUniversalPublicInputs') {
+    doLast {
+        def libs = ['SDL2','compat-SDL2-addons','compat-SDL2-ext','compat-limbo','compat-musl','glib-2.0','limbo','pixman-1','qemu-system-x86_64'].collect { "lib${it}.so".toString() } as Set
+        if (!universalNative.isDirectory() || (universalNative.list() as Set) != (universalAbis as Set))
+            throw new GradleException('Provide exactly four rebuilt ABI directories using -PfdpUniversalNative=<directory>.')
+        universalAbis.each { abi ->
+            def files = new File(universalNative, abi).listFiles()
+            if (files == null || (files.collect { it.name } as Set) != libs || !files.every { it.isFile() && it.length() > 0 })
+                throw new GradleException("Missing or unexpected rebuilt library in ${abi}; all nine are required.")
+        }
+        def seed = file('src/publicRelease/assets/seed')
+        if ((seed.list() as Set) != (['manifest.json','system.vdi.bin','software.vdi.bin'] as Set))
+            throw new GradleException('Complete public seed overlay required; no fallback to private assets.')
+        def meta = new groovy.json.JsonSlurper().parse(new File(seed,'manifest.json'))
+        if (meta.edition != 'public-release' || meta.system.sha256 != '6c8c0db34381fe3b016b0864ca18ab35c34b51582f4f08ff80e8c4201d88569a' || meta.software.sha256 != '5208e97539649e84fc095dfbc7c31e8c071e0c79bbb766c7e898e92afca46a3e')
+            throw new GradleException('Wrong public seed manifest.')
+        // Also check the real expanded disks: a valid manifest beside an old personal
+        // compressed image must not silently create an unsafe unsigned build.
+        [system:1060110336L,software:5242880L].each { name, size ->
+            def sha = java.security.MessageDigest.getInstance('SHA-256')
+            long bytes = 0
+            new File(seed,name+'.vdi.bin').withInputStream { input ->
+                new java.util.zip.GZIPInputStream(input).withCloseable { stream ->
+                    def buffer = new byte[1024*1024]
+                    int count
+                    while ((count = stream.read(buffer)) != -1) {
+                        bytes += count
+                        if (bytes > size) throw new GradleException("Oversized public disk: ${name}")
+                        sha.update(buffer,0,count)
+                    }
+                }
+            }
+            if (bytes != size || meta[name].bytes != size || sha.digest().encodeHex().toString() != meta[name].sha256)
+                throw new GradleException("Unexpected public disk: ${name}")
+        }
+    }
+}
+android {
+    namespace 'org.freedos.pocket'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'org.freedos.pocket'
+        minSdk 26
+        targetSdk 34
+        versionCode 18
+        versionName '0.3.15-public'
+        buildConfigField 'int', 'PORT_OFFSET', '0'
+        resValue 'string', 'app_name', 'FreeDOS Pocket'
+        resValue 'string', 'edition_description', 'This installation contains an offline FreeDOS environment with locally stored disks.'
+    }
+    sourceSets.main {
+        manifest.srcFile 'AndroidManifest.xml'
+        java.srcDirs = ['src']
+        assets.srcDirs = ['assets']
+        // No default fallback to historical native libraries for alternate ABI probes.
+        jniLibs.srcDirs = []
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    buildFeatures { buildConfig true }
+    androidResources { noCompress += ['bin'] }
+    packagingOptions { jniLibs { useLegacyPackaging false } }
+    // A release build must be signed with a dedicated user-owned key.  Never
+    // silently publish an APK carrying the shared Android debug certificate.
+    buildTypes {
+        debug {
+            ndk { abiFilters 'arm64-v8a' }
+            buildConfigField 'boolean', 'ENABLE_AUDIO_DIAGNOSTICS', 'true'
+            buildConfigField 'boolean', 'PUBLIC_EDITION', 'false'
+        }
+        release {
+            ndk { abiFilters 'arm64-v8a' }
+            minifyEnabled false
+            debuggable false
+            buildConfigField 'boolean', 'ENABLE_AUDIO_DIAGNOSTICS', 'false'
+            buildConfigField 'boolean', 'PUBLIC_EDITION', 'false'
+        }
+        publicRelease {
+            initWith release
+            ndk { abiFilters.clear(); abiFilters 'arm64-v8a','x86_64' }
+            applicationIdSuffix '.community'
+            resValue 'string', 'app_name', 'FreeDOS Pocket'
+            resValue 'string', 'edition_description', 'This installation contains a FreeDOS-based C: environment and a new empty D: data disk. Add only software you are legally allowed to use.'
+            buildConfigField 'boolean', 'ENABLE_AUDIO_DIAGNOSTICS', 'false'
+            buildConfigField 'boolean', 'PUBLIC_EDITION', 'true'
+            matchingFallbacks = ['release']
+        }
+        publicUniversalRelease {
+            initWith publicRelease
+            ndk { abiFilters.clear(); abiFilters 'arm64-v8a','armeabi-v7a','x86','x86_64' }
+            applicationIdSuffix '.community'
+            debuggable false
+            matchingFallbacks = ['publicRelease','release']
+        }
+        compatProbe {
+            initWith publicRelease
+            ndk { abiFilters.clear(); abiFilters 'arm64-v8a' }
+            applicationIdSuffix '.compatprobe'
+            resValue 'string', 'app_name', 'FreeDOS Compatibility Test'
+            buildConfigField 'int', 'PORT_OFFSET', '100'
+            signingConfig signingConfigs.debug
+            matchingFallbacks = ['publicRelease', 'release']
+        }
+        otherAbiProbe {
+            initWith compatProbe
+            ndk { abiFilters.clear(); abiFilters otherProbeAbi }
+            applicationIdSuffix '.abiprobe'
+            buildConfigField 'int', 'PORT_OFFSET', '110'
+            resValue 'string', 'app_name', 'FreeDOS CPU Test'
+        }
+    }
+    sourceSets.publicRelease {
+        assets.srcDirs = ['src/publicRelease/assets']
+    }
+    sourceSets.compatProbe {
+        assets.srcDirs = ['src/publicRelease/assets']
+    }
+    [sourceSets.debug,sourceSets.release,sourceSets.compatProbe].each {
+        it.jniLibs.srcDirs = ['jniLibs']
+    }
+    sourceSets.publicRelease.jniLibs.srcDirs = [layout.buildDirectory.dir('generated/public0316Jni')]
+    sourceSets.publicUniversalRelease {
+        assets.srcDirs = ['src/publicRelease/assets']
+        jniLibs.srcDirs = [universalNative]
+    }
+    sourceSets.otherAbiProbe {
+        assets.srcDirs = ['src/publicRelease/assets']
+        jniLibs.srcDirs = [otherNativeStage]
+    }
+}
+
+androidComponents {
+    beforeVariants(selector().withBuildType('publicUniversalRelease')) { builder ->
+        builder.minSdk = 21
+        builder.targetSdk = 35
+    }
+    onVariants(selector().withBuildType('publicUniversalRelease')) { variant ->
+        variant.outputs.each { output ->
+            output.versionCode.set(21)
+            output.versionName.set('0.3.17-public')
+        }
+    }
+    beforeVariants(selector().withBuildType('publicRelease')) { builder ->
+        builder.minSdk = 21
+        builder.targetSdk = 35
+    }
+    onVariants(selector().withBuildType('publicRelease')) { variant ->
+        variant.outputs.each { output ->
+            output.versionCode.set(20)
+            output.versionName.set('0.3.16-public')
+        }
+    }
+    ['compatProbe','otherAbiProbe'].each { type ->
+        beforeVariants(selector().withBuildType(type)) { builder -> builder.minSdk = 21 }
+        onVariants(selector().withBuildType(type)) { variant ->
+            variant.outputs.each { output ->
+                output.versionName.set(type == 'compatProbe' ? '0.3.16-compat-probe' : "0.3.16-${otherProbeAbi}-probe".toString())
+                output.versionCode.set(19)
+            }
+        }
+    }
+}
+
+def checkOther = tasks.register('checkOtherProbeNative') {
+    doLast {
+        def libs = ['SDL2','compat-SDL2-addons','compat-SDL2-ext','compat-limbo','compat-musl','glib-2.0','limbo','pixman-1','qemu-system-x86_64'].collect { "lib${it}.so".toString() } as Set
+        def actual = new File(otherNativeStage, otherProbeAbi).listFiles()?.findAll { it.isFile() }?.collect { it.name } as Set
+        if (actual != libs) throw new GradleException("Missing or unexpected rebuilt ${otherProbeAbi} binaries in ${otherNativeStage}; refusing to use old prebuilts.")
+    }
+}
+tasks.matching { it.name == 'preOtherAbiProbeBuild' }.configureEach { dependsOn(checkOther) }
+tasks.matching { it.name in ['prePublicReleaseBuild','mergePublicReleaseJniLibFolders'] }.configureEach { dependsOn(publicNative) }
+tasks.matching { it.name in ['prePublicUniversalReleaseBuild','mergePublicUniversalReleaseJniLibFolders','mergePublicUniversalReleaseAssets'] }.configureEach { dependsOn(checkUniversal) }

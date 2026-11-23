@@ -1,0 +1,380 @@
+{
+  "assets/bios/QEMU,cgthree.bin": {
+    "bytes": 850,
+    "sha256": "a99f3a06fdac5cf5d72bd0fd24647d897302c3ff8e918add65168185f8cbdf4d"
+  },
+  "assets/bios/QEMU,tcx.bin": {
+    "bytes": 1402,
+    "sha256": "92da99a770ab24f96c33c78382940cac8b25e88cb110634c1b32aa2d8cb852e7"
+  },
+  "assets/bios/README": {
+    "bytes": 3839,
+    "sha256": "76a3c5cad9afb5768b60dfe3ab635129062edfaf78a876f9a83b3e26156ca0ce"
+  },
+  "assets/bios/bios-256k.bin": {
+    "bytes": 262144,
+    "sha256": "83652b0300e937418a487607109da0949ce7972b1ce8d7564866712cbd292dce"
+  },
+  "assets/bios/bios-microvm.bin": {
+    "bytes": 65536,
+    "sha256": "303ba051356c7cb94c347a5b5b654c663b5ce1813ed24522b471e9e5a3378800"
+  },
+  "assets/bios/bios.bin": {
+    "bytes": 131072,
+    "sha256": "a960db3f2f488b3f219b6e7271eb5784be480f8282c03d82bf6cfaa8db2c3bb4"
+  },
+  "assets/bios/efi-e1000.rom": {
+    "bytes": 240128,
+    "sha256": "35e58deeafc2fb49f6bde565787e2967ea495c182e75357b4eff07b5fb073cdf"
+  },
+  "assets/bios/efi-e1000e.rom": {
+    "bytes": 240128,
+    "sha256": "e65cbf106451ce17738762ba684e937c5bb37e9e2f0bcbceb11190634abded0a"
+  },
+  "assets/bios/efi-eepro100.rom": {
+    "bytes": 240128,
+    "sha256": "35b7228ffec4f3cc88cd8e52552dd55d761ada49b0402b258d64285d04f3f838"
+  },
+  "assets/bios/efi-ne2k_pci.rom": {
+    "bytes": 238592,
+    "sha256": "6530e3922de65370e8cdb7125fe695d05023a16cc5967aeb12d75f3cd534e246"
+  },
+  "assets/bios/efi-pcnet.rom": {
+    "bytes": 238592,
+    "sha256": "befe0b3369ed3c517072f714b0d7e4610d251e1ec1a4a119754ea47dcbc0fe53"
+  },
+  "assets/bios/efi-rtl8139.rom": {
+    "bytes": 242688,
+    "sha256": "d8a1cefbed880d699aa947914437ba8eb4c1eaa66d650eec3de45751858606f3"
+  },
+  "assets/bios/efi-virtio.rom": {
+    "bytes": 242688,
+    "sha256": "21165c22d0e5fa1cf64364e8a162cf071c6968b50d5490f4f77500d12723b674"
+  },
+  "assets/bios/efi-vmxnet3.rom": {
+    "bytes": 236032,
+    "sha256": "f4fbba8e531e147037ad48c0639851ed354d5ae34badf4a1e6ce95492040d422"
+  },
+  "assets/bios/etc/resolv.conf": {
+    "bytes": 20,
+    "sha256": "c6e18e548020983d8767301d3dcfeaae64b3cd8d0bb9b587e16904e6818c3c67"
+  },
+  "assets/bios/hppa-firmware.img": {
+    "bytes": 766136,
+    "sha256": "483c5bf85a0946e93785fef1ed0e760f0f1ea99b992bb47294f86e7b1e966aef"
+  },
+  "assets/bios/keymaps/Makefile": {
+    "bytes": 1222,
+    "sha256": "5345a08624f7c0ef13c35d3e88a375e4fb3acbddf582dc319a3915770d79c27f"
+  },
+  "assets/bios/keymaps/ar": {
+    "bytes": 19913,
+    "sha256": "d19b5f27bd216c01c638d56b0a4cc82d18ba6e1ca050cde8eae47df81282ee4f"
+  },
+  "assets/bios/keymaps/bepo": {
+    "bytes": 19117,
+    "sha256": "765595ede15ed643f0cf83e62a329968339259c75095d7e005e96067263e575d"
+  },
+  "assets/bios/keymaps/cz": {
+    "bytes": 20517,
+    "sha256": "6d69affac440538a662f17db0ed974c639ef571a1801b2399334c5b77dd31feb"
+  },
+  "assets/bios/keymaps/da": {
+    "bytes": 20544,
+    "sha256": "b33a5203921a96ad6d9000822add4c25f46ab1dbe502019927a4e126503d5071"
+  },
+  "assets/bios/keymaps/de": {
+    "bytes": 20491,
+    "sha256": "a0a7457a291a101a63ba9ca50de09184a6e483df5ca08c21b0aa13686a72fd41"
+  },
+  "assets/bios/keymaps/de-ch": {
+    "bytes": 20522,
+    "sha256": "70dd17561812c1a351d95880d111eccb8aba9ea360e240f9b2daa2a85e9ddac3"
+  },
+  "assets/bios/keymaps/en-gb": {
+    "bytes": 20527,
+    "sha256": "b68b493224dc82870b88734ea93b4c171b476137aa60802c2fa799b839308a53"
+  },
+  "assets/bios/keymaps/en-us": {
+    "bytes": 18394,
+    "sha256": "cf73f761d0f13cf3f40d549a583481affdf95dd076fef55835b77e754f28c983"
+  },
+  "assets/bios/keymaps/es": {
+    "bytes": 20511,
+    "sha256": "de48c202994efa9290d5bdae2ee37f1a12b6f6c7738d3b45fe350ef75ae72bda"
+  },
+  "assets/bios/keymaps/et": {
+    "bytes": 18599,
+    "sha256": "01be5aded06a3ffbb993f66abc91db9a4eba93c53db46866ad5e3c5c36075717"
+  },
+  "assets/bios/keymaps/fi": {
+    "bytes": 19912,
+    "sha256": "353136247bb1973735b087517c1541c60be57c526e42d6e3858f93fc5f615e0f"
+  },
+  "assets/bios/keymaps/fo": {
+    "bytes": 20525,
+    "sha256": "e232deeaa62e62213be4b99e7b5b601c8ec3641faccdf2fe826d98c22e3da43e"
+  },
+  "assets/bios/keymaps/fr": {
+    "bytes": 20512,
+    "sha256": "7ea23d0f01313d0d76375b868407ada36b16bb3f2696af7ba6fbbd0894f9612e"
+  },
+  "assets/bios/keymaps/fr-be": {
+    "bytes": 20519,
+    "sha256": "6b85d8a4759c629efffe3d583b819faa6179c44cd0605b51e840f2d785a24a73"
+  },
+  "assets/bios/keymaps/fr-ca": {
+    "bytes": 18872,
+    "sha256": "e61be736d2d0d2bbc5605bf5147813c290d96a0508163b1cc4475875fabc7039"
+  },
+  "assets/bios/keymaps/fr-ch": {
+    "bytes": 20523,
+    "sha256": "d64b64ed36355f43e3471f108472b55ac506b3f3399b92f2352d6efd0f9b0687"
+  },
+  "assets/bios/keymaps/hr": {
+    "bytes": 20563,
+    "sha256": "b792b9261c391b81d5fc661c6c0d9f5f6876d77e9c975f54fd59c06c0ad892aa"
+  },
+  "assets/bios/keymaps/hu": {
+    "bytes": 20521,
+    "sha256": "678b3998d28645223a9010dd8e680b9719d44925128126f1ae526d776dec5d26"
+  },
+  "assets/bios/keymaps/is": {
+    "bytes": 20562,
+    "sha256": "68bb5b9d79e2dce68e56d04272099058ffbcf536b3f038b83540401fd9871158"
+  },
+  "assets/bios/keymaps/it": {
+    "bytes": 20620,
+    "sha256": "396e8206693fee8fb6d7c2d536874f2f4b40d56c0ab3839a3aef642d0e1abe5c"
+  },
+  "assets/bios/keymaps/ja": {
+    "bytes": 18471,
+    "sha256": "2d54163e93c01bc546a4f3993c89f148f2027925be0b4a53fa4f88531493730d"
+  },
+  "assets/bios/keymaps/lt": {
+    "bytes": 20474,
+    "sha256": "30a9bc80deb34333f0f6fba0db34d7a80f933419dab669e3c49ee5905a42129d"
+  },
+  "assets/bios/keymaps/lv": {
+    "bytes": 19926,
+    "sha256": "6032e221953edce51ec07fa1c7fcc91f34fe505997dfe243edc7aff4920b43fe"
+  },
+  "assets/bios/keymaps/mk": {
+    "bytes": 18993,
+    "sha256": "a1dbc60dcfe21865b36dda5b63a567e5390016ed102d6ff00cd324bfcb471310"
+  },
+  "assets/bios/keymaps/nl": {
+    "bytes": 20576,
+    "sha256": "4cc8518651978acd99758f285090936be82dbe06bb655acd052e50ba42c420b8"
+  },
+  "assets/bios/keymaps/no": {
+    "bytes": 20877,
+    "sha256": "c021203c42b304d96da736aa62713fe24a0c98ed16c9c87d3e49d73003dea525"
+  },
+  "assets/bios/keymaps/pl": {
+    "bytes": 20635,
+    "sha256": "958327fe10069966c42e1d5bc19566f2f2d1731edefddbad25b1dc905925c984"
+  },
+  "assets/bios/keymaps/pt": {
+    "bytes": 20503,
+    "sha256": "c3fd2d21d878e90f000a58ef8ac39859d7664e2b3a73c492a2d9d7b6bd9ac415"
+  },
+  "assets/bios/keymaps/pt-br": {
+    "bytes": 20483,
+    "sha256": "20acef583c3bcd62106c89a0883a0a84134e7744c32988eb04f28a239975f71f"
+  },
+  "assets/bios/keymaps/ru": {
+    "bytes": 19012,
+    "sha256": "1f48211ea69a9233f30f286e0380a35f63be4b36734cffed0feca66d917db7be"
+  },
+  "assets/bios/keymaps/sl": {
+    "bytes": 4632,
+    "sha256": "bea8fe8ac0ca281038ac0e1788c39f090507ff0646bd4f57cc18f6873b030147"
+  },
+  "assets/bios/keymaps/sv": {
+    "bytes": 3346,
+    "sha256": "97731fbe91f254d81c005ffc232180a8dd7baeb6d699f0f0fc15e341672f96b3"
+  },
+  "assets/bios/keymaps/th": {
+    "bytes": 19137,
+    "sha256": "a0194d4f2923eeab071055059096602c125ce60846d98ad2325103b2be3641f0"
+  },
+  "assets/bios/keymaps/tr": {
+    "bytes": 20450,
+    "sha256": "667f18bbb05409dead891d68360ac715941b309a8a436ca0be15dd27819fd1b0"
+  },
+  "assets/bios/kvmvapic.bin": {
+    "bytes": 9216,
+    "sha256": "cdf057a71b07e3b52b19cbe210bdefa59250d01a9810b960f7fe1f98eed95a27"
+  },
+  "assets/bios/linuxboot.bin": {
+    "bytes": 1024,
+    "sha256": "1ecfb26c19da9dc00cdec0d0d738db69aeea4f1231c0c0ffc483ff69b3cda6ce"
+  },
+  "assets/bios/linuxboot_dma.bin": {
+    "bytes": 1536,
+    "sha256": "9c49e255340c78fc12e54ed043462bca02fb7fca29b7cfab62ff88a5344b6950"
+  },
+  "assets/bios/multiboot.bin": {
+    "bytes": 1024,
+    "sha256": "13a3f9f119797b8776105f020f36572ce6a20fa2c60d3b8112818bfaefcdd348"
+  },
+  "assets/bios/openbios-ppc": {
+    "bytes": 696912,
+    "sha256": "48e8123259ff290bf1b665ed5e8c989c0deb7e57515bd82ccbc42cb0b6d1ce38"
+  },
+  "assets/bios/openbios-sparc32": {
+    "bytes": 382048,
+    "sha256": "c10bebc632de96f4cb3e598f87f1af71d3ae3c08b79aff1b5ffc4958a5b22370"
+  },
+  "assets/bios/openbios-sparc64": {
+    "bytes": 1593408,
+    "sha256": "ac2377028d309cbb534871f497afbd48621cb50ac66c1e090c8a25166b5e3dcd"
+  },
+  "assets/bios/opensbi-riscv32-sifive_u-fw_jump.bin": {
+    "bytes": 49520,
+    "sha256": "5ab673a59e65084f5196f49c6d1ed7767643a1858b9aac0df9cdc01a97754777"
+  },
+  "assets/bios/opensbi-riscv32-virt-fw_jump.bin": {
+    "bytes": 49504,
+    "sha256": "e014ed353196c03d7db93caebb9184dd50397f0609b6d03b1f6303d640103338"
+  },
+  "assets/bios/opensbi-riscv64-sifive_u-fw_jump.bin": {
+    "bytes": 57936,
+    "sha256": "2b3e956d14d4782cc3ce0f89c279e6707798fc4223a209c7e80c68ee0ab76100"
+  },
+  "assets/bios/opensbi-riscv64-virt-fw_jump.bin": {
+    "bytes": 57920,
+    "sha256": "7f301edb3b232b232bd58d2b4640cb359953bec3e63d78a56995393106febc8f"
+  },
+  "assets/bios/pvh.bin": {
+    "bytes": 1536,
+    "sha256": "918ff03a118615c2f4611a5df2d9496aabe099b5cfaaf69e544ebf973305d59d"
+  },
+  "assets/bios/pxe-e1000.rom": {
+    "bytes": 67072,
+    "sha256": "981a728f95b7a01645645e9b753cfb764c9eb59266fa888ac58d7008fbb48c10"
+  },
+  "assets/bios/pxe-eepro100.rom": {
+    "bytes": 61440,
+    "sha256": "07b89a742e0f6d0e92dafe57b0f28c493436d0e1e07b7b77e728490c1f7b45dd"
+  },
+  "assets/bios/pxe-ne2k_pci.rom": {
+    "bytes": 61440,
+    "sha256": "bb9c0eaad36b9b4ce26c5f348bd05a832c8bf83ef38391db0ce9b51de8523ac7"
+  },
+  "assets/bios/pxe-pcnet.rom": {
+    "bytes": 61440,
+    "sha256": "92358396c05b3346c6bfd52bbf2a47978d0a8c6ddea932ee091a24faefbd489e"
+  },
+  "assets/bios/pxe-rtl8139.rom": {
+    "bytes": 61440,
+    "sha256": "d491351e37a50eb5a40e98a9f6b4d85010ee60fb9e64129d65ea10839287f138"
+  },
+  "assets/bios/pxe-virtio.rom": {
+    "bytes": 60416,
+    "sha256": "6994337fe07783a6233072e33771dc4f58260edc3269debe677a5227b264bfdc"
+  },
+  "assets/bios/qemu-nsis.bmp": {
+    "bytes": 154542,
+    "sha256": "93f79a2b6e0f97bc7b7c75ded89a3c4c7657af37c087cf067470771e0affda9c"
+  },
+  "assets/bios/qemu-nsis.ico": {
+    "bytes": 4846,
+    "sha256": "a63f8dabf35130d2da8e8e0f59e3346f3af6d6d0a050e00817c3f2393408c7b2"
+  },
+  "assets/bios/qemu.rsrc": {
+    "bytes": 134622,
+    "sha256": "9e1e5cf3d8f835501fc8bf6f6bc8353580b40c57edc4de83e4fed64518697b8a"
+  },
+  "assets/bios/qemu_logo.svg": {
+    "bytes": 32447,
+    "sha256": "0f0879c3929d8fa0750960f35cf100147ab5152fbd4a0c489ae225616c1c2671"
+  },
+  "assets/bios/s390-ccw.img": {
+    "bytes": 42608,
+    "sha256": "ded3aea129e548a1c4d8f5b0120287ee9b94e6a13f4784819de93c45ae83111f"
+  },
+  "assets/bios/s390-netboot.img": {
+    "bytes": 67232,
+    "sha256": "611e53549455ba1a1351eb1bc9d83b9090935dc7b24f988ec8ef4e19f64f9859"
+  },
+  "assets/bios/sgabios.bin": {
+    "bytes": 4096,
+    "sha256": "4ff078a7f7ec1c02a334f806cfc47fe0fe10f5f845963e94f83b0cc471a3ea4e"
+  },
+  "assets/bios/slof.bin": {
+    "bytes": 968368,
+    "sha256": "f2a3e3b241c1b1a0927e5c1597a9ae31fa8409ec43a9216c774430540f66fb1f"
+  },
+  "assets/bios/u-boot-sam460-20100605.bin": {
+    "bytes": 524288,
+    "sha256": "be88ed96a6f50d5ba8ad7bf019f48e7f73acee95402d90d0dac3775d9c7a8d03"
+  },
+  "assets/bios/vgabios-ati.bin": {
+    "bytes": 39424,
+    "sha256": "c2329b6e0f895ce6889a7bbac2803e7b0d7177c1ffe5526c0e0fa5b61dbc2cf8"
+  },
+  "assets/bios/vgabios-bochs-display.bin": {
+    "bytes": 28672,
+    "sha256": "b843c1cd562a6031fa480c7da127874261909d15d2df74d03451e0e7a2aac6e2"
+  },
+  "assets/bios/vgabios-cirrus.bin": {
+    "bytes": 38912,
+    "sha256": "9d2a3aabb4248f27646603b81851766f46e7c9950951c22f822c3c08e78d30d4"
+  },
+  "assets/bios/vgabios-qxl.bin": {
+    "bytes": 39424,
+    "sha256": "62d790488998edcb19b2cea108fb90391c9f9c8a947e4fdc4bb4a1ec9fc3c6bd"
+  },
+  "assets/bios/vgabios-ramfb.bin": {
+    "bytes": 28672,
+    "sha256": "af18f459e8cbb30ae5e2ee7c1ffa197e92c5a9e8bc7baefdc2d840c0cc919e49"
+  },
+  "assets/bios/vgabios-stdvga.bin": {
+    "bytes": 39424,
+    "sha256": "ee6cb49f28135e24b6925eaa632f0db07e2564b2dc9fc013b4c27bd2fd3687d1"
+  },
+  "assets/bios/vgabios-virtio.bin": {
+    "bytes": 39424,
+    "sha256": "29edbf470b3141865edf2e748bcea33f50158d5436f4374fdbc640300dea996e"
+  },
+  "assets/bios/vgabios-vmware.bin": {
+    "bytes": 39424,
+    "sha256": "23d0059153a12c61a579265e6212e4b2fa509f6175a4dede4ff5b54e9b14d00c"
+  },
+  "assets/bios/vgabios.bin": {
+    "bytes": 38912,
+    "sha256": "e481d9f6cfb703e4f23c8b0d246fb05a0ee8a418bb57ed3b95937e4b4fbbb10a"
+  },
+  "assets/guest/hostime.img": {
+    "bytes": 1474560,
+    "sha256": "eecddb502b5231dcb30ab2707139f94ff748b101b39b8cfb5474f4a492a31324"
+  },
+  "assets/licenses/HOSTIME-MIT.txt": {
+    "bytes": 1084,
+    "sha256": "9826e040123d09be9dfc4101cb4653471004f0d78439d0abaa2f29e9db9b6ba5"
+  },
+  "assets/licenses/Limbo-LICENSE.txt": {
+    "bytes": 84483,
+    "sha256": "fda38f6a1bad4b773675cadf1e7556dca47958536487c88fdd2a97e5502a9456"
+  },
+  "assets/licenses/PUBLIC-CONTENT-NOTICE.txt": {
+    "bytes": 826,
+    "sha256": "a1e0df82fe5e697c3db9bdc39a64406ba691ac713b9d7213a7197f4130793c11"
+  },
+  "assets/seed/manifest.json": {
+    "bytes": 402,
+    "sha256": "b1bbb4c48f8d5db428bbd155768861bd8697b145dd8b2936dfc49a89133e1a5d"
+  },
+  "assets/seed/software.vdi.bin": {
+    "bytes": 6768,
+    "expandedBytes": 5242880,
+    "sha256": "5208e97539649e84fc095dfbc7c31e8c071e0c79bbb766c7e898e92afca46a3e"
+  },
+  "assets/seed/system.vdi.bin": {
+    "bytes": 458146331,
+    "expandedBytes": 1060110336,
+    "sha256": "6c8c0db34381fe3b016b0864ca18ab35c34b51582f4f08ff80e8c4201d88569a"
+  }
+}
