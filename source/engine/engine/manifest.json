@@ -1,5 +1,5 @@
 {
-  "bytes_excluding_manifest": 80395360,
+  "bytes_excluding_manifest": 80410185,
   "excluded": [
     "signing keys and passwords",
     "private and public VDI disk images",
@@ -8,12 +8,12 @@
     "Gradle/NDK build output",
     "local.properties and machine-specific paths"
   ],
-  "file_count_excluding_manifest": 115,
+  "file_count_excluding_manifest": 121,
   "files": [
     {
-      "bytes": 2942,
+      "bytes": 2121,
       "path": "BUILDING.md",
-      "sha256": "28a937a1c87d8d17864953c1fc150cd850703510edb972d2836a65537f0132c8"
+      "sha256": "236ed343f1deafd77670d2a5e303ef4f3d56e72d0e9b93c8015696a3182987d4"
     },
     {
       "bytes": 84483,
@@ -31,9 +31,9 @@
       "sha256": "da0eca0fb517ac939d167924c9d4b3f8750a6b7191932ef2cb145acfa624ac7e"
     },
     {
-      "bytes": 4342,
+      "bytes": 4273,
       "path": "native-inputs.json",
-      "sha256": "438bd2037ea125e51d71c6852e3358f50a02f4758a825d94fcf07082f0ec5ff9"
+      "sha256": "9166f370b2a2aeb89721cdf48f1f9841287c9f88c66d01a01dc1d64ac6b8b49f"
     },
     {
       "bytes": 559082,
@@ -51,9 +51,9 @@
       "sha256": "0dc92fc8fd10ba4c430494218cb68e167c9010b15cfd6965775dba31d6e1e951"
     },
     {
-      "bytes": 22767,
+      "bytes": 27133,
       "path": "patches/qemu-5.1.0-freedos-pocket.patch",
-      "sha256": "ff36176a1d9b978658c76e6fecddfc0b34d8a56ca33cd735260c25c6c8f889b0"
+      "sha256": "905714d91c080189f96f713993f96ef40cb885b9623dbc8083daa3f56495f708"
     },
     {
       "bytes": 5448,
@@ -66,9 +66,9 @@
       "sha256": "d7f352e0ee7541ee3384cd9870a1e58bb31738d2782cf3e0edf5a2ba699cb672"
     },
     {
-      "bytes": 11152,
+      "bytes": 11229,
       "path": "project/android-app/app/build.gradle",
-      "sha256": "8d8dfcf7824055fd5bbd98fefecbcc9cf05b51c562dfcd659cbab7f1cbcff38e"
+      "sha256": "ece67d24ff6b8dbee5278291d2173f10af1b99adb980953512de57b4bbeb36b8"
     },
     {
       "bytes": 1823,
@@ -138,7 +138,7 @@
     {
       "bytes": 264,
       "path": "project/android-app/app/src/personalCommunityUniversalRelease/assets-nocdrom/seed/manifest.json",
-      "sha256": "e2595580d8cf987b5dbe2363f9df3d21c9fe6b0d29c3a3f8d221b1793404325d"
+      "sha256": "68f8687dc44bc625ee2d4479b7c4987151ae91d4e46086882d855f50e8cf646c"
     },
     {
       "bytes": 826,
@@ -481,6 +481,11 @@
       "sha256": "1941e70c1c7a6d5b5a44db33bd6b865facdcf26a4bbcb58a1cc83e18b651f2c1"
     },
     {
+      "bytes": 1869,
+      "path": "project/tools/Build-0320Release.ps1",
+      "sha256": "7717e1bcaf9b0f746fa49bc5c210f89ab5b4f8733442b81e1081a377a49effb9"
+    },
+    {
       "bytes": 5716,
       "path": "project/tools/Check-UniversalInputs.py",
       "sha256": "b6d0c81e9d0310e3826284c06b7b5781a0e851ef4d199e61c68b37e9915760ac"
@@ -501,9 +506,19 @@
       "sha256": "5a8c508c36617f9bec6176a4f171ed4fcd621a2e2b811fe4cda3b04744875b98"
     },
     {
+      "bytes": 1205,
+      "path": "project/tools/Fix-DosDevelPaths.py",
+      "sha256": "803d5ff24cf21f6e5664f940e03e2158782adf3ef283068ccf5cc02882630001"
+    },
+    {
       "bytes": 1476,
       "path": "project/tools/Prepare-PersonalCommunitySeed.ps1",
       "sha256": "8bcb4f01cb8bb96d9f1df8c93f7eeddca73c981b0034cf63948742f9f22ffd7d"
+    },
+    {
+      "bytes": 1814,
+      "path": "project/tools/Relink-AndroidArm64Coroutine.ps1",
+      "sha256": "68424be1619b1f4a9a552d18e921d57f38c9a006a1a32f3f84b7e9260e8253c7"
     },
     {
       "bytes": 1599,
@@ -514,6 +529,21 @@
       "bytes": 2942,
       "path": "project/tools/Source0317-BUILDING.md",
       "sha256": "28a937a1c87d8d17864953c1fc150cd850703510edb972d2836a65537f0132c8"
+    },
+    {
+      "bytes": 1736,
+      "path": "project/tools/Stage-0320SoftwareSeed.py",
+      "sha256": "76890dcf0c2799f66db63119ce115a0fb7a5567a12e8835bdc0ab523fafcfe22"
+    },
+    {
+      "bytes": 1606,
+      "path": "project/tools/Stage-0320SystemSeed.py",
+      "sha256": "09dc7b9ffd4ebb4e9ae20aebb35e06564077d4394b6cb57eee4951080625314c"
+    },
+    {
+      "bytes": 2736,
+      "path": "project/tools/Test-AndroidDosBoot.py",
+      "sha256": "050ed87f0bb885c7c5fb9fb4f058d42aba52260ca671a9453406c7ce0648dddc"
     },
     {
       "bytes": 13239,
@@ -576,9 +606,9 @@
       "sha256": "edc77c57308661d576e843344d8638e025a7818bff73f8fbfab09c3c5fd092ec"
     },
     {
-      "bytes": 3582,
+      "bytes": 3888,
       "path": "verify-archive.py",
-      "sha256": "6e18e755636e2793cde1f72d4db719898e56d91b37839828c7f2b73a8056a374"
+      "sha256": "a9b4e9c960336f82413e5ae6cbc606fa64c0dbaf0ffb80e9d6139cdfd97c67fc"
     },
     {
       "bytes": 7863,
@@ -586,10 +616,10 @@
       "sha256": "350d57ee307738ab01715ae6cd72683853e9885de5c35c2bac2d8fe73efe7845"
     }
   ],
-  "name": "FreeDOS Pocket 0.3.19 corresponding engine and Android source",
+  "name": "FreeDOS Pocket 0.3.20 engine and Android source",
   "patches": [
     {
-      "bytes": 22767,
+      "bytes": 27133,
       "changed_files": [
         {
           "normalized_sha256": "f52276a6f15cbb2e111c4bdb5c7985f7a6cd2ab3229dd8e9113be78ee6e93426",
@@ -674,10 +704,18 @@
         {
           "normalized_sha256": "1163f11531a066a4afd8695030de225affce6ac228dd958c3f98d31099e4b4f7",
           "path": "util/qemu-openpty.c"
+        },
+        {
+          "normalized_sha256": "f11179773de84b122c6e6c90e1f5bcddb684a5a11b6e8e88a217f8e48eb6b744",
+          "path": "util/coroutine-sigaltstack.c"
+        },
+        {
+          "normalized_sha256": "3aa75e26dd04e1f5a3b580d2711bd99e9d4fa90018f89c373d8e9516c59d4526",
+          "path": "util/coroutine-android-aarch64.inc"
         }
       ],
       "name": "qemu-5.1.0-freedos-pocket.patch",
-      "sha256": "ff36176a1d9b978658c76e6fecddfc0b34d8a56ca33cd735260c25c6c8f889b0"
+      "sha256": "905714d91c080189f96f713993f96ef40cb885b9623dbc8083daa3f56495f708"
     },
     {
       "bytes": 5448,
@@ -972,7 +1010,7 @@
       "sha256": "8c333779544b5d95db3b5ad7f7f759534928656f39ee6b745556d83f83a87754"
     }
   ],
-  "release": "0.3.19",
+  "release": "0.3.20",
   "schema_version": 1,
   "upstream_archives": [
     {

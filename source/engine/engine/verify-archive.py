@@ -22,13 +22,17 @@ def verify(filename, apk=None, expected_release=None):
         for n in names:
             path = PurePosixPath(n)
             check(path.parts[0]=='engine' and '..' not in path.parts and '\\' not in n and not path.is_absolute(), f'Invalid member: {n}')
-            check(not any(seg.lower() in {'private','.git','.gradle','personal','build','obj','jnilibs','seed'} for seg in path.parts)
+            seed_manifest = n == ('engine/project/android-app/app/src/personalCommunityUniversalRelease/'
+                                  'assets-nocdrom/seed/manifest.json')
+            check(not any(seg.lower() in {'private','.git','.gradle','personal','build','obj','jnilibs'} for seg in path.parts)
+                  and ('seed' not in (p.lower() for p in path.parts) or seed_manifest)
                   and path.suffix.lower() not in {'.so','.o','.jks','.p12','.lineage','.dpapi','.vdi','.apk','.img'}, f'Unexpected private/binary entry: {n}')
         m = json.loads(z.read('engine/manifest.json'))
         required = {'BUILDING.md','verify-archive.py','rebuild/prepare-native-tree.py','rebuild/build-abi.sh','native-inputs.json','rebuild/deps.sh','rebuild/core.sh','project/android-app/app/build.gradle','project/android-app/app/AndroidManifest.xml'}
         rec = {r['path']: r for r in m['files']}
         check(required <= rec.keys() and set(names) == {'engine/'+n for n in rec}|{'engine/manifest.json'}, 'Incomplete source ZIP')
-        releases={'0.3.16-public':ABIS,'0.3.17-public':ABIS|{'armeabi-v7a','x86'}}
+        four_abis = ABIS|{'armeabi-v7a','x86'}
+        releases={'0.3.16-public':ABIS,'0.3.17-public':four_abis,'0.3.20':four_abis}
         check(m['release'] in releases and (expected_release is None or expected_release==m['release'])
               and len(m['upstream_archives'])==6 and len(m['patches'])==5, 'Wrong source baseline')
         abis=releases[m['release']]

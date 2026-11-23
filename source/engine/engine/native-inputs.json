@@ -11,7 +11,7 @@
       "libglib-2.0.so": "c429ffb28edc98211dff64cba545add7e552e685cb14cd4bd39e9c66367ca32d",
       "liblimbo.so": "3307b56891b75b56fb6096acdf9be90c8ec891719cea7470083639cb3160d591",
       "libpixman-1.so": "1949f30399b93aaf583c381f9a12bd3ea4b5fec1a0b9fc5f222408f5f5a5218f",
-      "libqemu-system-x86_64.so": "e05c14ccd5b8d850ba5dc0edc089ae93f2ae6d04d4c28d3cbb9139d7d5cdbdab"
+      "libqemu-system-x86_64.so": "94450f9d6d09012a3310d824861b1414cdf7952540d712d54b8fd0b6cc32fdd5"
     },
     "armeabi-v7a": {
       "libSDL2.so": "2cc0eae5ee9342340ce221e7b7dafc978d85be18d2e833279e0d940d3e4d6705",
@@ -47,7 +47,7 @@
       "libqemu-system-x86_64.so": "0255d594e693ab1e2251b759e7ee3e84f557ac352804fdddc67f8619b4f88c5d"
     }
   },
-  "method": "ARM64: exact match with prior public APK and retained obj/local. Other ABIs: stripped native-stage file hashes match per-ABI static-build audit. All compared to selected release APK.",
+  "method": "Hashes taken from the 0.3.20 APK. This release rebuilds the Android ARM64 QEMU coroutine object and relinks QEMU.",
   "sourceChecks": {
     "arm64-v8a": {
       "jniIntegrationFilesChecked": 58,
